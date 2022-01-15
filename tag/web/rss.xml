@@ -7,9 +7,11 @@
         <language>zh-CN</language>
         <pubDate>Fri, 14 Jan 2022 10:03:01 +0800</pubDate>
         <lastBuildDate>Fri, 14 Jan 2022 10:03:01 +0800</lastBuildDate>
+        <category>MySQL</category>
+        <category>网络</category>
+        <category>信息安全</category>
         <category>web</category>
         <category>web容器</category>
-        <category>信息安全</category>
         <item>
             <guid isPermalink="true">https://liuhuo23.github.io/2022/01/14/web%E6%90%AD%E5%BB%BA/</guid>
             <title>web搭建</title>

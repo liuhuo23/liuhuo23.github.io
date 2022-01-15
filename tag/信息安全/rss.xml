@@ -7,9 +7,11 @@
         <language>zh-CN</language>
         <pubDate>Thu, 13 Jan 2022 20:13:59 +0800</pubDate>
         <lastBuildDate>Thu, 13 Jan 2022 20:13:59 +0800</lastBuildDate>
+        <category>MySQL</category>
+        <category>网络</category>
+        <category>信息安全</category>
         <category>web</category>
         <category>web容器</category>
-        <category>信息安全</category>
         <item>
             <guid isPermalink="true">https://liuhuo23.github.io/2022/01/13/%E5%AE%89%E5%85%A8%E7%90%86%E8%AE%BA/</guid>
             <title>安全理论</title>
@@ -26,7 +28,7 @@
             <pubDate>Thu, 13 Jan 2022 19:56:28 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hello&#34;&gt;#&lt;/a&gt; hello&lt;/h1&gt;
 &lt;p&gt;中与重耕了&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/123.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/123.jpeg&#34; alt=&#34;123&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

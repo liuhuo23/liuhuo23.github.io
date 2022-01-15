@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Hexo • Posts by &#34;mysql&#34; category</title>
+        <link>https://liuhuo23.github.io</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Sat, 15 Jan 2022 09:32:33 +0800</pubDate>
+        <lastBuildDate>Sat, 15 Jan 2022 09:32:33 +0800</lastBuildDate>
+        <category>MySQL</category>
+        <category>网络</category>
+        <category>信息安全</category>
+        <category>web</category>
+        <category>web容器</category>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/15/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
+            <title>MySQL基础语法</title>
+            <link>https://liuhuo23.github.io/2022/01/15/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
+            <category>MySQL</category>
+            <pubDate>Sat, 15 Jan 2022 09:32:33 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;基本简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本简介&#34;&gt;#&lt;/a&gt; 基本简介&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sql 语句的学习主要为渗透中关于 Sql 注入漏洞打下坚实基础&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;1-数据库操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-数据库操作&#34;&gt;#&lt;/a&gt; 1. 数据库操作&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;基本的数据库操作，包括数据库连接，数据库基本语法&lt;/p&gt;
+&lt;p&gt;SQL 是用于访问和处理数据库标准的计算机语言&lt;/p&gt;
+&lt;p&gt;SQL 指结构化查询语言，全称是 Structured Query Language&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;11-数据库连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-数据库连接&#34;&gt;#&lt;/a&gt; 1.1 数据库连接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;输入命令  &lt;code&gt;mysql -uroot -p&lt;/code&gt;   之后回车是密文连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/image-20220115100526170.png&#34; alt=&#34;image-20220115100526170&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;​	输入命令  &lt;code&gt;mysql -uroot -p密码&lt;/code&gt;  回车 则是明文连接&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/image-20220115100928878.png&#34; alt=&#34;image-20220115100928878&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12-退出&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-退出&#34;&gt;#&lt;/a&gt; 1.2 退出&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Exit&lt;/li&gt;
+&lt;li&gt;quit&lt;/li&gt;
+&lt;li&gt;\q&lt;/li&gt;
+&lt;li&gt;ctrl+c&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;13-常用的sql语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13-常用的sql语句&#34;&gt;#&lt;/a&gt; 1.3 常用的 SQL 语句&lt;/h2&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; version&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询当前数据库版本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询当前数据库用户&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; @&lt;span class=&#34;token variable&#34;&gt;@basedir&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 查询当前路径&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;databases&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询所有数据库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;use&lt;/span&gt; databasename&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# databasename 为数据库名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; shou &lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询所有表名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt; 数据库名 &lt;span class=&#34;token comment&#34;&gt;# 创建一个数据库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;desc&lt;/span&gt; 表名&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询表结构&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;drop&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt; 数据库名&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 删除一个数据库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;14-基本操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14-基本操作&#34;&gt;#&lt;/a&gt; 1.4 基本操作&lt;/h2&gt;
+&lt;h1 id=&#34;2-数据库常用函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-数据库常用函数&#34;&gt;#&lt;/a&gt; 2. 数据库常用函数&lt;/h1&gt;
+&lt;h2 id=&#34;21-updatexml-语法updatexml目标xml文档xml路径更新的内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-updatexml-语法updatexml目标xml文档xml路径更新的内容&#34;&gt;#&lt;/a&gt; 2.1   &lt;code&gt;updatexml()&lt;/code&gt;   语法 updatexml (目标 xml 文档，xml 路径，更新的内容)&lt;/h2&gt;
+&lt;p&gt;语法： &lt;code&gt;select updatexml(&#39;anything&#39;,concat(&#39;~&#39;,(select version())),&#39;xxx&#39;);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/image-20220115141947255.png&#34; alt=&#34;image-20220115141947255&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;22-substring函数leftmid函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22-substring函数leftmid函数&#34;&gt;#&lt;/a&gt; 2.2  &lt;code&gt;substring()&lt;/code&gt;  函数， &lt;code&gt;left()&lt;/code&gt; , &lt;code&gt;mid()&lt;/code&gt;  函数&lt;/h2&gt;
+&lt;p&gt;语句：  &lt;code&gt;select substring(user(),1,2);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/image-20220115142319448.png&#34; alt=&#34;image-20220115142319448&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;23-ifabc-如果a为真则返回b否则返回c&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23-ifabc-如果a为真则返回b否则返回c&#34;&gt;#&lt;/a&gt; 2.3  &lt;code&gt;if(a,b,c)&lt;/code&gt;  如果 a 为真，则返回 b，否则返回 c&lt;/h2&gt;
+&lt;p&gt;语句：  &lt;code&gt;select if(length(database())=5,1,0);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/image-20220115142721804.png&#34; alt=&#34;图2-3&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;24-hex-unhex-函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#24-hex-unhex-函数&#34;&gt;#&lt;/a&gt; 2.4  &lt;code&gt;hex() &amp;amp;&amp;amp; unhex()&lt;/code&gt;  函数&lt;/h2&gt;
+&lt;p&gt;渗透中有些注入点因为数据库中对数据字段的类型定义，可能不支持&lt;mark&gt; union&lt;/mark&gt; 来显示某些不同类型的内容，所以使用&lt;mark&gt; hex&lt;/mark&gt; 对数据进行 16 进制的编码&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;hex()&lt;/code&gt;  参数可以是任何类型&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;slect hex&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;selec hex&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; hex&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/image-20220115144258184.png&#34; alt=&#34;结果&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/15/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/</guid>
+            <title>mysql数据库笔记</title>
+            <link>https://liuhuo23.github.io/2022/01/15/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/</link>
+            <category>MySQL</category>
+            <pubDate>Sat, 15 Jan 2022 09:32:33 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;创建数据库&lt;br&gt;
+ create database sis2107;&lt;/p&gt;
+&lt;p&gt;删除数据库&lt;br&gt;
+ drop database sis2107;&lt;/p&gt;
+&lt;p&gt;创建表，并添加约束&lt;br&gt;
+ create table table (id int auto_increment primary key,user varchar (4) not null,password varchar (10),sex char (4));&lt;br&gt;
+ 注：添加条件必须设置主键&lt;/p&gt;
+&lt;p&gt;添加表，不设置主键&lt;br&gt;
+ create table table1 (id int,user varchar (4),password varchar (10),sex char (4));&lt;/p&gt;
+&lt;p&gt;修改表，添加主键&lt;br&gt;
+ alter table table1 add primary key (id);&lt;/p&gt;
+&lt;p&gt;添加表，添加唯一主键&lt;br&gt;
+ create table table2 (id int primary key,user varchar (4),password varchar (10),sex char (4));&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; create table table3(id int,user varchar(4),password varchar(10),sex char(4),primary key(id));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;添加表，添加复合主键&lt;br&gt;
+ create table table4 (id int,user varchar (4),password varchar (10),sex char (4),age int (11),primary key (id,age));&lt;/p&gt;
+&lt;p&gt;添加表，添加唯一约束&lt;br&gt;
+ create table table5 (id int,user varchar (4),password varchar (10),sex char (4),age int (11),unique (id));&lt;/p&gt;
+&lt;p&gt;查看表中约束&lt;br&gt;
+ show create table table2;&lt;/p&gt;
+&lt;p&gt;修改表&lt;br&gt;
+ alter table table1 rename tables1&lt;/p&gt;
+&lt;p&gt;添加字段&lt;br&gt;
+ ALTER TABLE table1 ADD age int default null;&lt;/p&gt;
+&lt;p&gt;删除表&lt;br&gt;
+ drop table table1；&lt;/p&gt;
+&lt;p&gt;删除字段&lt;br&gt;
+ alter table table1 drop name;&lt;/p&gt;
+&lt;p&gt;添加数据&lt;br&gt;
+ insert into table1 values (1,&#34;xiaoqiao&#34;,18,&#34;woman&#34;,&#34;2002&#34;);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;insert into table1(id,name,age,sex,birthday) values(1,&#34;xiaoqiao&#34;,18,&#34;woman&#34;,&#34;2002&#34;);
+
+insert into table1(id,name,age,sex,birthday) values(1,&#34;xiaoqiao&#34;,18,&#34;woman&#34;,&#34;2002&#34;),(1,&#34;xiaoqiao&#34;,18,&#34;woman&#34;,&#34;2002&#34;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;删除数据&lt;br&gt;
+ delete from table1 where id=1;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;delete from table1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改数据&lt;br&gt;
+ update table1 set name=&#34;fff&#34;,sex=&#34;man&#34;,age=22 where id=2;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;update table1 set name=&#34;aaa&#34;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查询数据&lt;br&gt;
+ select * from table1;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select id,name from table1;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;按条件查询&lt;br&gt;
+ select * from table1 where id&amp;lt;6;&lt;/p&gt;
+&lt;p&gt;按条件查询 “in”，查询集合&lt;br&gt;
+ select * from table1 where age in (56,22);&lt;/p&gt;
+&lt;p&gt;按条件查询 “BETWEEN AND”，查询范围&lt;br&gt;
+ select * from table1 where id between 1 and 5;&lt;/p&gt;
+&lt;p&gt;空值查询&lt;br&gt;
+ select * from table1 where id is null;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select * from table1 where id is not null;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;按条件查询 “DISTINCT”，去重数据&lt;br&gt;
+ select distinct sex from table1;&lt;/p&gt;
+&lt;p&gt;LIKE 模糊查询&lt;br&gt;
+ “%” 通配符查询  查询指定范围 &#34;w% n/% n/w%&#34;&lt;br&gt;
+select * from table1 where sex like &#34;w%n&#34;;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;“_”下划线查询   查询缺少字符&#34;m_n/w__an&#34;
+	select * from table1 where sex like &#34;m_n&#34;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and 条件查询&lt;br&gt;
+ select * from table1 where id&amp;gt;5 and sex=&#34;man&#34;;&lt;/p&gt;
+&lt;p&gt;or 条件查询&lt;br&gt;
+ select  * from table1 where id&amp;lt;5 or age&amp;gt;30;&lt;/p&gt;
+&lt;p&gt;and,or 一起查询&lt;br&gt;
+ select * from table1 where id&amp;lt;5 or sex=&#34;man&#34; and age&amp;lt;50;&lt;/p&gt;
+&lt;p&gt;聚合函数&lt;br&gt;
+ count ()  返回字段条数&lt;br&gt;
+ select count (*) from table1;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sum()    返回数值和
+	select sum(age) from table1;
+
+avg()   返回平均值
+	select avg(age) from table1;
+
+max()   返回最大值
+	select max(age) from table1;
+
+min()   返回最小值
+	select min(age) from table1;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;order by   排序查询&lt;br&gt;
+ select * from table1 order by age;         正序&lt;br&gt;
+ select * from table1 order by age desc;    倒序&lt;/p&gt;
+&lt;p&gt;group by   关键字分组查询&lt;br&gt;
+单独使用&lt;br&gt;
+ select * from table1 group by sex;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;和聚合函数一起使用
+	SELECT COUNT(*) ,age FROM table1 GROUP BY age;
+
+GROUP BY 和 HAVING 关键字一起使用
+	SELECT sum(age),sex FROM table1 GROUP BY sex HAVING SUM(age) &amp;lt; 300;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;limit 限制查询结果数量&lt;br&gt;
+ select * from table1 limit 4;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select * from table1 limit 4,7;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;取别名 AS&lt;br&gt;
+ 表取别名（当即返回，不是永久）&lt;br&gt;
+select * from table1 as t where t.name=&#34;ccc&#34;;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;列取别名（当即返回，不是永久）
+	select name as user from table1;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;子查询 (嵌套查询)&lt;br&gt;
+select * from table1 where id&amp;lt;(select age from table1 where name=&#34;ccc&#34;);&lt;/p&gt;
+&lt;p&gt;联合查询&lt;br&gt;
+ select version () union select user ();&lt;/p&gt;
+&lt;p&gt;内置表查询&lt;br&gt;
+查询数据库：&lt;br&gt;
+select schema_name from information_schema.schemata;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;查询表名：
+	select table_name from information_schema.tables;
+
+查询列名：
+	select column_name from information_schema.columns;
+
+查询数据：
+	select * from students;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
