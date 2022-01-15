@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"web容器\" tag",
+    "description": "",
+    "home_page_url": "https://liuhuo23.github.io",
+    "items": [
+        {
+            "id": "https://liuhuo23.github.io/2022/01/14/web%E6%90%AD%E5%BB%BA/",
+            "url": "https://liuhuo23.github.io/2022/01/14/web%E6%90%AD%E5%BB%BA/",
+            "title": "web搭建",
+            "date_published": "2022-01-14T02:03:01.000Z",
+            "content_html": "<h1 id=\"一web-基础知识\"><a class=\"anchor\" href=\"#一web-基础知识\">#</a> 一：Web 基础知识</h1>\n<h2 id=\"1-网站的分类\"><a class=\"anchor\" href=\"#1-网站的分类\">#</a> 1. 网站的分类</h2>\n<ol>\n<li>\n<p>asp： 多用于小型站点，企业网站，个人博客</p>\n</li>\n<li>\n<p>jsp： 大型商业网站</p>\n</li>\n<li>\n<p>php： 多数用于中小型网站</p>\n</li>\n<li>\n<p>aspx： 多数用于小型站点，地方政府</p>\n</li>\n</ol>\n<h2 id=\"2-域名简介\"><a class=\"anchor\" href=\"#2-域名简介\">#</a> 2. 域名简介</h2>\n<p>域名：（英语： Domain Name）</p>\n<p>每一个域名都对应一个唯一的公网 IP</p>\n<h1 id=\"二web容器\"><a class=\"anchor\" href=\"#二web容器\">#</a> 二：WEB 容器</h1>\n<h2 id=\"1-web容器\"><a class=\"anchor\" href=\"#1-web容器\">#</a> 1. web 容器</h2>\n<p>web 容器是中间件，负责处理请求</p>\n<p>常见的 web 容器： IIS,Apache,Nginx,Tomcat,Jboss</p>\n<h2 id=\"2-脚本语言\"><a class=\"anchor\" href=\"#2-脚本语言\">#</a> 2. 脚本语言</h2>\n<p>脚本语言是一种 web 端的网页源代码，它又分为动态网页和静态网页</p>\n<p>动态网页： jsp，php</p>\n<p>静态网页： html,heml5,shtml</p>\n<h2 id=\"3数据库\"><a class=\"anchor\" href=\"#3数据库\">#</a> 3. 数据库</h2>\n<ol>\n<li>\n<p>MySQL：开源的免费的轻量的数据库，一般被使用在大中小型网站</p>\n</li>\n<li>\n<p>Oracle： 付费的，一般用于大型网站</p>\n</li>\n<li>\n<p>Micsoft SQLServer： 适用中小型的网站</p>\n</li>\n</ol>\n<h1 id=\"三-服务器\"><a class=\"anchor\" href=\"#三-服务器\">#</a> 三： 服务器</h1>\n<h2 id=\"1-简介\"><a class=\"anchor\" href=\"#1-简介\">#</a> 1. 简介</h2>\n<p>服务器是一种高性能计算机，作为网络节点，多提供文件存储服务</p>\n<h2 id=\"2-常见的服务器搭配\"><a class=\"anchor\" href=\"#2-常见的服务器搭配\">#</a> 2. 常见的服务器搭配</h2>\n<p>windows + IIS + Access + asp/aspx</p>\n<p>windows + IIS + SQLServer + asp/aspx</p>\n<p>windows + Apache + MySql + PHP</p>\n<p>windows + Nginx + MySql + JSP</p>\n<p>linux + Tomcat + jsp + MySql</p>\n<p>linux + Apache + PHP + MySql (LAMP)</p>\n<p>linxu + Nginx + MySql + PHP (LNMP)</p>\n<p>linux + Nginx + Oracle + JSP</p>\n<h2 id=\"3-服务器搭建\"><a class=\"anchor\" href=\"#3-服务器搭建\">#</a> 3. 服务器搭建</h2>\n<p>Windows：</p>\n<p>Windows server2000\tIIS6.0</p>\n<p>Windows server2003\tIIS7.0</p>\n<p>Windows server2008\tIIS7.0/7.5</p>\n<p>Windows server2012\tIIS8.0</p>\n<p>Windows server2016\tIIS8.5</p>\n<p>Windows10\t\t\tIIS10.0</p>\n<p>Linux：</p>\n<p>Ubuntu</p>\n<p>Red Hat Enterprise Linux (RHEL)</p>\n<p>SUSE Linux Enterprise Server</p>\n<p>CentOS (Community OS) Linux Server</p>\n<p>Debian</p>\n<h2 id=\"4-数据库-脚本与系统的关系\"><a class=\"anchor\" href=\"#4-数据库-脚本与系统的关系\">#</a> 4. 数据库、脚本与系统的关系</h2>\n<h3 id=\"41-标配\"><a class=\"anchor\" href=\"#41-标配\">#</a> 4.1 标配</h3>\n<p>Access + asp/aspx + IIS+Windows</p>\n<p>Sqlserver(mssql) + asp/aspx + IIS + Windows</p>\n<p>Mysql + php/jsp + Apache + Linux</p>\n<p>Oracle +jsp + apache/Nginx + Linux</p>\n<p>​       PS</p>\n<p>​\t数据库与脚本、系统 、并非绑定关系，只是出于性能而已的标配、另外还要注意 Windows 对大小写不敏感，而 Linux 对大小写敏感。</p>\n",
+            "tags": [
+                "web",
+                "web容器"
+            ]
+        }
+    ]
+}

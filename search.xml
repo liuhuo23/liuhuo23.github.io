@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title>测试2</title>
-      <link href="/2022/01/13/%E6%B5%8B%E8%AF%952/"/>
-      <url>/2022/01/13/%E6%B5%8B%E8%AF%952/</url>
+      <title>web搭建</title>
+      <link href="/2022/01/14/web%E6%90%AD%E5%BB%BA/"/>
+      <url>/2022/01/14/web%E6%90%AD%E5%BB%BA/</url>
       
-        <content type="html"><![CDATA[<img src="123.jpeg" alt="123" style="zoom:150%;">]]></content>
+        <content type="html"><![CDATA[<h1 id="一web-基础知识"><a class="anchor" href="#一web-基础知识">#</a> 一：Web 基础知识</h1><h2 id="1-网站的分类"><a class="anchor" href="#1-网站的分类">#</a> 1. 网站的分类</h2><ol><li><p>asp： 多用于小型站点，企业网站，个人博客</p></li><li><p>jsp： 大型商业网站</p></li><li><p>php： 多数用于中小型网站</p></li><li><p>aspx： 多数用于小型站点，地方政府</p></li></ol><h2 id="2-域名简介"><a class="anchor" href="#2-域名简介">#</a> 2. 域名简介</h2><p>域名：（英语： Domain Name）</p><p>每一个域名都对应一个唯一的公网 IP</p><h1 id="二web容器"><a class="anchor" href="#二web容器">#</a> 二：WEB 容器</h1><h2 id="1-web容器"><a class="anchor" href="#1-web容器">#</a> 1. web 容器</h2><p>web 容器是中间件，负责处理请求</p><p>常见的 web 容器： IIS,Apache,Nginx,Tomcat,Jboss</p><h2 id="2-脚本语言"><a class="anchor" href="#2-脚本语言">#</a> 2. 脚本语言</h2><p>脚本语言是一种 web 端的网页源代码，它又分为动态网页和静态网页</p><p>动态网页： jsp，php</p><p>静态网页： html,heml5,shtml</p><h2 id="3数据库"><a class="anchor" href="#3数据库">#</a> 3. 数据库</h2><ol><li><p>MySQL：开源的免费的轻量的数据库，一般被使用在大中小型网站</p></li><li><p>Oracle： 付费的，一般用于大型网站</p></li><li><p>Micsoft SQLServer： 适用中小型的网站</p></li></ol><h1 id="三-服务器"><a class="anchor" href="#三-服务器">#</a> 三： 服务器</h1><h2 id="1-简介"><a class="anchor" href="#1-简介">#</a> 1. 简介</h2><p>服务器是一种高性能计算机，作为网络节点，多提供文件存储服务</p><h2 id="2-常见的服务器搭配"><a class="anchor" href="#2-常见的服务器搭配">#</a> 2. 常见的服务器搭配</h2><p>windows + IIS + Access + asp/aspx</p><p>windows + IIS + SQLServer + asp/aspx</p><p>windows + Apache + MySql + PHP</p><p>windows + Nginx + MySql + JSP</p><p>linux + Tomcat + jsp + MySql</p><p>linux + Apache + PHP + MySql (LAMP)</p><p>linxu + Nginx + MySql + PHP (LNMP)</p><p>linux + Nginx + Oracle + JSP</p><h2 id="3-服务器搭建"><a class="anchor" href="#3-服务器搭建">#</a> 3. 服务器搭建</h2><p>Windows：</p><p>Windows server2000IIS6.0</p><p>Windows server2003IIS7.0</p><p>Windows server2008IIS7.0/7.5</p><p>Windows server2012IIS8.0</p><p>Windows server2016IIS8.5</p><p>Windows10IIS10.0</p><p>Linux：</p><p>Ubuntu</p><p>Red Hat Enterprise Linux (RHEL)</p><p>SUSE Linux Enterprise Server</p><p>CentOS (Community OS) Linux Server</p><p>Debian</p><h2 id="4-数据库-脚本与系统的关系"><a class="anchor" href="#4-数据库-脚本与系统的关系">#</a> 4. 数据库、脚本与系统的关系</h2><h3 id="41-标配"><a class="anchor" href="#41-标配">#</a> 4.1 标配</h3><p>Access + asp/aspx + IIS+Windows</p><p>Sqlserver(mssql) + asp/aspx + IIS + Windows</p><p>Mysql + php/jsp + Apache + Linux</p><p>Oracle +jsp + apache/Nginx + Linux</p><p>​       PS</p><p>​数据库与脚本、系统 、并非绑定关系，只是出于性能而已的标配、另外还要注意 Windows 对大小写不敏感，而 Linux 对大小写敏感。</p>]]></content>
       
       
+      <categories>
+          
+          <category> web全栈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+            <tag> web容器 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -46,7 +60,7 @@
       <link href="/2022/01/13/%E6%B5%8B%E8%AF%95/"/>
       <url>/2022/01/13/%E6%B5%8B%E8%AF%95/</url>
       
-        <content type="html"><![CDATA[<h1 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h1><p>中与重耕了</p><p><img src="123.jpeg" alt="123"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="hello"><a class="anchor" href="#hello">#</a> hello</h1><p>中与重耕了</p><p><img data-src="https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/123.jpeg" alt=""></p>]]></content>
       
       
       
@@ -55,19 +69,6 @@
             <tag> 信息安全 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2022/01/13/hello-world/"/>
-      <url>/2022/01/13/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Hexo • Posts by &#34;web容器&#34; tag</title>
+        <link>https://liuhuo23.github.io</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 14 Jan 2022 10:03:01 +0800</pubDate>
+        <lastBuildDate>Fri, 14 Jan 2022 10:03:01 +0800</lastBuildDate>
+        <category>信息安全</category>
+        <category>web</category>
+        <category>web容器</category>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/14/web%E6%90%AD%E5%BB%BA/</guid>
+            <title>web搭建</title>
+            <link>https://liuhuo23.github.io/2022/01/14/web%E6%90%AD%E5%BB%BA/</link>
+            <category>web</category>
+            <category>web容器</category>
+            <pubDate>Fri, 14 Jan 2022 10:03:01 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;一web-基础知识&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一web-基础知识&#34;&gt;#&lt;/a&gt; 一：Web 基础知识&lt;/h1&gt;
+&lt;h2 id=&#34;1-网站的分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-网站的分类&#34;&gt;#&lt;/a&gt; 1. 网站的分类&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;asp： 多用于小型站点，企业网站，个人博客&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;jsp： 大型商业网站&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;php： 多数用于中小型网站&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;aspx： 多数用于小型站点，地方政府&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2-域名简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-域名简介&#34;&gt;#&lt;/a&gt; 2. 域名简介&lt;/h2&gt;
+&lt;p&gt;域名：（英语： Domain Name）&lt;/p&gt;
+&lt;p&gt;每一个域名都对应一个唯一的公网 IP&lt;/p&gt;
+&lt;h1 id=&#34;二web容器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二web容器&#34;&gt;#&lt;/a&gt; 二：WEB 容器&lt;/h1&gt;
+&lt;h2 id=&#34;1-web容器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-web容器&#34;&gt;#&lt;/a&gt; 1. web 容器&lt;/h2&gt;
+&lt;p&gt;web 容器是中间件，负责处理请求&lt;/p&gt;
+&lt;p&gt;常见的 web 容器： IIS,Apache,Nginx,Tomcat,Jboss&lt;/p&gt;
+&lt;h2 id=&#34;2-脚本语言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-脚本语言&#34;&gt;#&lt;/a&gt; 2. 脚本语言&lt;/h2&gt;
+&lt;p&gt;脚本语言是一种 web 端的网页源代码，它又分为动态网页和静态网页&lt;/p&gt;
+&lt;p&gt;动态网页： jsp，php&lt;/p&gt;
+&lt;p&gt;静态网页： html,heml5,shtml&lt;/p&gt;
+&lt;h2 id=&#34;3数据库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3数据库&#34;&gt;#&lt;/a&gt; 3. 数据库&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL：开源的免费的轻量的数据库，一般被使用在大中小型网站&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Oracle： 付费的，一般用于大型网站&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Micsoft SQLServer： 适用中小型的网站&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;三-服务器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三-服务器&#34;&gt;#&lt;/a&gt; 三： 服务器&lt;/h1&gt;
+&lt;h2 id=&#34;1-简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-简介&#34;&gt;#&lt;/a&gt; 1. 简介&lt;/h2&gt;
+&lt;p&gt;服务器是一种高性能计算机，作为网络节点，多提供文件存储服务&lt;/p&gt;
+&lt;h2 id=&#34;2-常见的服务器搭配&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-常见的服务器搭配&#34;&gt;#&lt;/a&gt; 2. 常见的服务器搭配&lt;/h2&gt;
+&lt;p&gt;windows + IIS + Access + asp/aspx&lt;/p&gt;
+&lt;p&gt;windows + IIS + SQLServer + asp/aspx&lt;/p&gt;
+&lt;p&gt;windows + Apache + MySql + PHP&lt;/p&gt;
+&lt;p&gt;windows + Nginx + MySql + JSP&lt;/p&gt;
+&lt;p&gt;linux + Tomcat + jsp + MySql&lt;/p&gt;
+&lt;p&gt;linux + Apache + PHP + MySql (LAMP)&lt;/p&gt;
+&lt;p&gt;linxu + Nginx + MySql + PHP (LNMP)&lt;/p&gt;
+&lt;p&gt;linux + Nginx + Oracle + JSP&lt;/p&gt;
+&lt;h2 id=&#34;3-服务器搭建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-服务器搭建&#34;&gt;#&lt;/a&gt; 3. 服务器搭建&lt;/h2&gt;
+&lt;p&gt;Windows：&lt;/p&gt;
+&lt;p&gt;Windows server2000	IIS6.0&lt;/p&gt;
+&lt;p&gt;Windows server2003	IIS7.0&lt;/p&gt;
+&lt;p&gt;Windows server2008	IIS7.0/7.5&lt;/p&gt;
+&lt;p&gt;Windows server2012	IIS8.0&lt;/p&gt;
+&lt;p&gt;Windows server2016	IIS8.5&lt;/p&gt;
+&lt;p&gt;Windows10			IIS10.0&lt;/p&gt;
+&lt;p&gt;Linux：&lt;/p&gt;
+&lt;p&gt;Ubuntu&lt;/p&gt;
+&lt;p&gt;Red Hat Enterprise Linux (RHEL)&lt;/p&gt;
+&lt;p&gt;SUSE Linux Enterprise Server&lt;/p&gt;
+&lt;p&gt;CentOS (Community OS) Linux Server&lt;/p&gt;
+&lt;p&gt;Debian&lt;/p&gt;
+&lt;h2 id=&#34;4-数据库-脚本与系统的关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-数据库-脚本与系统的关系&#34;&gt;#&lt;/a&gt; 4. 数据库、脚本与系统的关系&lt;/h2&gt;
+&lt;h3 id=&#34;41-标配&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#41-标配&#34;&gt;#&lt;/a&gt; 4.1 标配&lt;/h3&gt;
+&lt;p&gt;Access + asp/aspx + IIS+Windows&lt;/p&gt;
+&lt;p&gt;Sqlserver(mssql) + asp/aspx + IIS + Windows&lt;/p&gt;
+&lt;p&gt;Mysql + php/jsp + Apache + Linux&lt;/p&gt;
+&lt;p&gt;Oracle +jsp + apache/Nginx + Linux&lt;/p&gt;
+&lt;p&gt;​       PS&lt;/p&gt;
+&lt;p&gt;​	数据库与脚本、系统 、并非绑定关系，只是出于性能而已的标配、另外还要注意 Windows 对大小写不敏感，而 Linux 对大小写敏感。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
