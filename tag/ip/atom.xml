@@ -1,27 +1,21 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>Hexo • Posts by &#34;网络&#34; tag</title>
-        <link>https://liuhuo23.github.io</link>
-        <description></description>
-        <language>zh-CN</language>
-        <pubDate>Sat, 15 Jan 2022 09:50:48 +0800</pubDate>
-        <lastBuildDate>Sat, 15 Jan 2022 09:50:48 +0800</lastBuildDate>
-        <category>MySQL</category>
-        <category>web</category>
-        <category>web容器</category>
-        <category>信息安全</category>
-        <category>操作系统</category>
-        <category>网络</category>
-        <category>IP</category>
-        <item>
-            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
-            <title>计算机网络</title>
-            <link>https://liuhuo23.github.io/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
-            <category>网络</category>
-            <category>IP</category>
-            <pubDate>Sat, 15 Jan 2022 09:50:48 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;推荐一个纪录片&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#推荐一个纪录片&#34;&gt;#&lt;/a&gt; 推荐一个纪录片&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://liuhuo23.github.io</id>
+    <title>Hexo • Posts by &#34;ip&#34; tag</title>
+    <link href="https://liuhuo23.github.io" />
+    <updated>2022-01-15T01:50:48.000Z</updated>
+    <category term="MySQL" />
+    <category term="web" />
+    <category term="web容器" />
+    <category term="信息安全" />
+    <category term="操作系统" />
+    <category term="网络" />
+    <category term="IP" />
+    <entry>
+        <id>https://liuhuo23.github.io/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</id>
+        <title>计算机网络</title>
+        <link rel="alternate" href="https://liuhuo23.github.io/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+        <content type="html">&lt;h2 id=&#34;推荐一个纪录片&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#推荐一个纪录片&#34;&gt;#&lt;/a&gt; 推荐一个纪录片&lt;/h2&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXVFNDExbzdVVz9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xMTE4MTg3OTM3NTMyMjg1MDczMyZhbXA7c3BtX2lkX2Zyb209MzMzLjMzNy4wLjA=&#34;&gt;互联网时代&lt;/span&gt;  一个非常优秀的纪录片&lt;/p&gt;
 &lt;h1 id=&#34;1计算机网络&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1计算机网络&#34;&gt;#&lt;/a&gt; 1. 计算机网络&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -311,7 +305,9 @@ client 发出的第一个连接请求报文段并没有丢失，而是在某个�
 &lt;li&gt;发送方与接收方之间必须采用相同的协议才能建立连接，实现正常的通信&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/1641821484028-605bd9f5-59d2-4767-baa4-0f9a01a6cec4.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="网络" />
+        <category term="IP" />
+        <updated>2022-01-15T01:50:48.000Z</updated>
+    </entry>
+</feed>
