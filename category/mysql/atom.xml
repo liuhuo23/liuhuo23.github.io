@@ -5,10 +5,11 @@
     <link href="https://liuhuo23.github.io" />
     <updated>2022-01-15T01:32:33.000Z</updated>
     <category term="MySQL" />
-    <category term="网络" />
-    <category term="信息安全" />
     <category term="web" />
     <category term="web容器" />
+    <category term="信息安全" />
+    <category term="操作系统" />
+    <category term="网络" />
     <entry>
         <id>https://liuhuo23.github.io/2022/01/15/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</id>
         <title>MySQL基础语法</title>
@@ -45,8 +46,53 @@
 &lt;li&gt;ctrl+c&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;13-常用的sql语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13-常用的sql语句&#34;&gt;#&lt;/a&gt; 1.3 常用的 SQL 语句&lt;/h2&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; version&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询当前数据库版本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询当前数据库用户&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; @&lt;span class=&#34;token variable&#34;&gt;@basedir&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 查询当前路径&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;databases&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询所有数据库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;use&lt;/span&gt; databasename&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# databasename 为数据库名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; shou &lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询所有表名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt; 数据库名 &lt;span class=&#34;token comment&#34;&gt;# 创建一个数据库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;desc&lt;/span&gt; 表名&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询表结构&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;drop&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt; 数据库名&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 删除一个数据库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;14-基本操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14-基本操作&#34;&gt;#&lt;/a&gt; 1.4 基本操作&lt;/h2&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; version&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询当前数据库版本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询当前数据库用户&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; @&lt;span class=&#34;token variable&#34;&gt;@basedir&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 查询当前路径&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;databases&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询所有数据库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;use&lt;/span&gt; databasename&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# databasename 为数据库名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;shou &lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询所有表名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt; 数据库名 &lt;span class=&#34;token comment&#34;&gt;# 创建一个数据库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;desc&lt;/span&gt; 表名&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查询表结构&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;drop&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt; 数据库名&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 删除一个数据库&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;14-sql-dml-和-ddl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14-sql-dml-和-ddl&#34;&gt;#&lt;/a&gt; 1.4 SQL DML 和 DDL&lt;/h2&gt;
+&lt;p&gt;SQL 语句可以分为两部分： 数据操作语言 (DML) 和 数据定义语言（DDL）。&lt;/p&gt;
+&lt;h3 id=&#34;sql-的-dml-部分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql-的-dml-部分&#34;&gt;#&lt;/a&gt; SQL 的 &lt;mark&gt;DML&lt;/mark&gt; 部分&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;mark&gt;SELECT&lt;/mark&gt; - 从数据库表中获取数据&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;UPDATE&lt;/mark&gt; - 更新数据库表中的数据&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;DELETE&lt;/mark&gt; - 从数据库中删除数据&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;INSERT INTO&lt;/mark&gt; - 向数据库表中插入数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sql-的-ddl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql-的-ddl&#34;&gt;#&lt;/a&gt; SQL 的 &lt;mark&gt;DDL&lt;/mark&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;mark&gt;CREATE DATABASE&lt;/mark&gt;  - 创建数据库&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;ALTER DATABASE&lt;/mark&gt; - 修改数据库&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;CREATE TABLE&lt;/mark&gt; - 修改数据库表&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;DROPTABLE&lt;/mark&gt; - 删除表&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;CREATE INDEX&lt;/mark&gt;- 船舰索引&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;DROP INDEX&lt;/mark&gt; - 删除索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;  &lt;mark&gt;SQL 对大小写不敏感&lt;/mark&gt;&lt;/p&gt;
+&lt;h2 id=&#34;15-sql中的-tips&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#15-sql中的-tips&#34;&gt;#&lt;/a&gt; 1.5 SQL 中的 tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;符号运用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;=====   		数据库的赋值符号&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;or/||&lt;/mark&gt;     逻辑或&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;xor&lt;/mark&gt;      逻辑异或&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;&amp;amp;&amp;amp;/and&lt;/mark&gt;       逻辑与&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;NOT/！&lt;/mark&gt;  逻辑非&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;+ - * /&lt;/mark&gt;  基本运算符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常用注释符&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt; &lt;/h1&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;--&lt;/mark&gt; + 空格&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;/**/&lt;/mark&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;2-数据库常用函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-数据库常用函数&#34;&gt;#&lt;/a&gt; 2. 数据库常用函数&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有关数据库基本函数的功能介绍和基本用法&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;21-updatexml-语法updatexml目标xml文档xml路径更新的内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-updatexml-语法updatexml目标xml文档xml路径更新的内容&#34;&gt;#&lt;/a&gt; 2.1   &lt;code&gt;updatexml()&lt;/code&gt;   语法 updatexml (目标 xml 文档，xml 路径，更新的内容)&lt;/h2&gt;
 &lt;p&gt;语法： &lt;code&gt;select updatexml(&#39;anything&#39;,concat(&#39;~&#39;,(select version())),&#39;xxx&#39;);&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/image-20220115141947255.png&#34; alt=&#34;image-20220115141947255&#34;&gt;&lt;/p&gt;
@@ -60,6 +106,17 @@
 &lt;p&gt;渗透中有些注入点因为数据库中对数据字段的类型定义，可能不支持&lt;mark&gt; union&lt;/mark&gt; 来显示某些不同类型的内容，所以使用&lt;mark&gt; hex&lt;/mark&gt; 对数据进行 16 进制的编码&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;hex()&lt;/code&gt;  参数可以是任何类型&lt;/p&gt;
 &lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;slect hex&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;selec hex&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; hex&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/image-20220115144258184.png&#34; alt=&#34;结果&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;3-mysql-数据库基本数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-mysql-数据库基本数据类型&#34;&gt;#&lt;/a&gt; 3. MySQL 数据库基本数据类型&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;介绍 MySQL 数据库的基本数据类型&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;31-数值类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#31-数值类型&#34;&gt;#&lt;/a&gt; 3.1 数值类型&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/1624934729617-62cc7f2f-4fa9-417a-9e0d-286841d9db06.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt; 数据库中回经常涉及到关于金额的存取，涉及到金钱的存取应当采取 &lt;mark&gt;MEDIUMINT&lt;/mark&gt; 这种大整数值&lt;/p&gt;
+&lt;h2 id=&#34;32-日期和时间类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#32-日期和时间类型&#34;&gt;#&lt;/a&gt; 3.2 日期和时间类型&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/1624934749713-cf3fa5ec-36f6-4b34-a011-2760b12394c9.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;字符串&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#字符串&#34;&gt;#&lt;/a&gt; 字符串&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/1624934764195-2399cd03-1085-434a-b7fc-e3f61a45bc75.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 </content>
         <category term="MySQL" />
         <updated>2022-01-15T01:32:33.000Z</updated>
