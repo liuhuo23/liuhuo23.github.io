@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"cryptography\" category",
+    "description": "",
+    "home_page_url": "https://liuhuo23.github.io",
+    "items": [
+        {
+            "id": "https://liuhuo23.github.io/2022/02/09/cryptography/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%B8%80/",
+            "url": "https://liuhuo23.github.io/2022/02/09/cryptography/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%B8%80/",
+            "title": "密码学一",
+            "date_published": "2022-02-09T12:04:46.000Z",
+            "content_html": "<h1 id=\"密码学\"><a class=\"anchor\" href=\"#密码学\">#</a> 密码学</h1>\n<h2 id=\"11-密码学基本概念\"><a class=\"anchor\" href=\"#11-密码学基本概念\">#</a> 1.1 密码学基本概念</h2>\n<p>密码学： 网络安全，信息安全，区块链 所必须</p>\n<p>核心： 就是混淆真实信息，并且让合法的用户从混淆后的信息中得到真实信息</p>\n<h2 id=\"12-密码学的历史\"><a class=\"anchor\" href=\"#12-密码学的历史\">#</a> 1.2 密码学的历史</h2>\n<h3 id=\"121-替换法\"><a class=\"anchor\" href=\"#121-替换法\">#</a> 1.2.1 替换法</h3>\n<p>① 替换法</p>\n<p>使用固定的信息，将原文替换成密文</p>\n<p>例如： bee，将 b 替换成 w ，e 替换 p，经过替换后变为： wpp</p>\n<p>替换法的加密方式：</p>\n<ul>\n<li>\n<p>单表替换： 原文和密文使用的是同一张表</p>\n</li>\n<li>\n<p>多表替换：表示有多张表，原文和密文进行对比</p>\n<p>例如： 表单 1 abcde-swtrp, 表单 2： abced-chfhk 表单 3： abcde-jftou</p>\n<p>原文： bee</p>\n<p>密钥： 312</p>\n<p>密文： fpk</p>\n</li>\n</ul>\n<p>② 移位法</p>\n<p>将原文中所有的字母按照字母表上面的位置，进行移动</p>\n<p><mark>凯撒加密法：</mark></p>\n<p>例如： abcde  往后面移动 2 位 cdefg</p>\n<p>③ 古典密码学的破解方法</p>\n<ol>\n<li>频率分析法：概率论</li>\n<li></li>\n</ol>\n<h1 id=\"常见的加密方式\"><a class=\"anchor\" href=\"#常见的加密方式\">#</a> 常见的加密方式</h1>\n<h2 id=\"21-散列函数\"><a class=\"anchor\" href=\"#21-散列函数\">#</a> 2.1 散列函数</h2>\n<p>① MD5</p>\n<p>② SHA-1</p>\n<p>③ SHA-256</p>\n<p>④ SHA-512</p>\n<h2 id=\"22对称加密\"><a class=\"anchor\" href=\"#22对称加密\">#</a> 2.2 对称加密</h2>\n<p>① DES 加密解密</p>\n<p>② 加密模式 ECB CBC</p>\n<h2 id=\"23-非对称加密\"><a class=\"anchor\" href=\"#23-非对称加密\">#</a> 2.3 非对称加密</h2>\n<p>① RSA 算法</p>\n<p>② ECC 算法</p>\n<p>③ 数字摘要</p>\n",
+            "tags": [
+                "密码"
+            ]
+        }
+    ]
+}

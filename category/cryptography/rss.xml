@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Hexo • Posts by &#34;cryptography&#34; category</title>
+        <link>https://liuhuo23.github.io</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 09 Feb 2022 20:04:46 +0800</pubDate>
+        <lastBuildDate>Wed, 09 Feb 2022 20:04:46 +0800</lastBuildDate>
+        <category>MySQL</category>
+        <category>web</category>
+        <category>web容器</category>
+        <category>信息安全</category>
+        <category>操作系统</category>
+        <category>网络</category>
+        <category>IP</category>
+        <category>socket</category>
+        <category>rust</category>
+        <category>服务器</category>
+        <category>搜索</category>
+        <category>密码</category>
+        <category>trait</category>
+        <category>linux</category>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/02/09/cryptography/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%B8%80/</guid>
+            <title>密码学一</title>
+            <link>https://liuhuo23.github.io/2022/02/09/cryptography/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%B8%80/</link>
+            <category>密码</category>
+            <pubDate>Wed, 09 Feb 2022 20:04:46 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;密码学&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密码学&#34;&gt;#&lt;/a&gt; 密码学&lt;/h1&gt;
+&lt;h2 id=&#34;11-密码学基本概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-密码学基本概念&#34;&gt;#&lt;/a&gt; 1.1 密码学基本概念&lt;/h2&gt;
+&lt;p&gt;密码学： 网络安全，信息安全，区块链 所必须&lt;/p&gt;
+&lt;p&gt;核心： 就是混淆真实信息，并且让合法的用户从混淆后的信息中得到真实信息&lt;/p&gt;
+&lt;h2 id=&#34;12-密码学的历史&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-密码学的历史&#34;&gt;#&lt;/a&gt; 1.2 密码学的历史&lt;/h2&gt;
+&lt;h3 id=&#34;121-替换法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#121-替换法&#34;&gt;#&lt;/a&gt; 1.2.1 替换法&lt;/h3&gt;
+&lt;p&gt;① 替换法&lt;/p&gt;
+&lt;p&gt;使用固定的信息，将原文替换成密文&lt;/p&gt;
+&lt;p&gt;例如： bee，将 b 替换成 w ，e 替换 p，经过替换后变为： wpp&lt;/p&gt;
+&lt;p&gt;替换法的加密方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单表替换： 原文和密文使用的是同一张表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多表替换：表示有多张表，原文和密文进行对比&lt;/p&gt;
+&lt;p&gt;例如： 表单 1 abcde-swtrp, 表单 2： abced-chfhk 表单 3： abcde-jftou&lt;/p&gt;
+&lt;p&gt;原文： bee&lt;/p&gt;
+&lt;p&gt;密钥： 312&lt;/p&gt;
+&lt;p&gt;密文： fpk&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;② 移位法&lt;/p&gt;
+&lt;p&gt;将原文中所有的字母按照字母表上面的位置，进行移动&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;凯撒加密法：&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;例如： abcde  往后面移动 2 位 cdefg&lt;/p&gt;
+&lt;p&gt;③ 古典密码学的破解方法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;频率分析法：概率论&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;常见的加密方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的加密方式&#34;&gt;#&lt;/a&gt; 常见的加密方式&lt;/h1&gt;
+&lt;h2 id=&#34;21-散列函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-散列函数&#34;&gt;#&lt;/a&gt; 2.1 散列函数&lt;/h2&gt;
+&lt;p&gt;① MD5&lt;/p&gt;
+&lt;p&gt;② SHA-1&lt;/p&gt;
+&lt;p&gt;③ SHA-256&lt;/p&gt;
+&lt;p&gt;④ SHA-512&lt;/p&gt;
+&lt;h2 id=&#34;22对称加密&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22对称加密&#34;&gt;#&lt;/a&gt; 2.2 对称加密&lt;/h2&gt;
+&lt;p&gt;① DES 加密解密&lt;/p&gt;
+&lt;p&gt;② 加密模式 ECB CBC&lt;/p&gt;
+&lt;h2 id=&#34;23-非对称加密&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23-非对称加密&#34;&gt;#&lt;/a&gt; 2.3 非对称加密&lt;/h2&gt;
+&lt;p&gt;① RSA 算法&lt;/p&gt;
+&lt;p&gt;② ECC 算法&lt;/p&gt;
+&lt;p&gt;③ 数字摘要&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

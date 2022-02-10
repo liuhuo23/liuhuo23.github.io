@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"搜索\" tag",
+    "description": "",
+    "home_page_url": "https://liuhuo23.github.io",
+    "items": [
+        {
+            "id": "https://liuhuo23.github.io/2022/01/25/IS/%E8%B5%84%E4%BA%A7%E6%94%B6%E9%9B%86/",
+            "url": "https://liuhuo23.github.io/2022/01/25/IS/%E8%B5%84%E4%BA%A7%E6%94%B6%E9%9B%86/",
+            "title": "资产收集",
+            "date_published": "2022-01-25T11:17:46.000Z",
+            "content_html": "",
+            "tags": [
+                "搜索"
+            ]
+        }
+    ]
+}

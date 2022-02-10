@@ -5,8 +5,8 @@
         <link>https://liuhuo23.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Thu, 13 Jan 2022 20:13:59 +0800</pubDate>
-        <lastBuildDate>Thu, 13 Jan 2022 20:13:59 +0800</lastBuildDate>
+        <pubDate>Tue, 25 Jan 2022 19:17:46 +0800</pubDate>
+        <lastBuildDate>Tue, 25 Jan 2022 19:17:46 +0800</lastBuildDate>
         <category>MySQL</category>
         <category>web</category>
         <category>web容器</category>
@@ -14,6 +14,30 @@
         <category>操作系统</category>
         <category>网络</category>
         <category>IP</category>
+        <category>socket</category>
+        <category>rust</category>
+        <category>服务器</category>
+        <category>搜索</category>
+        <category>密码</category>
+        <category>trait</category>
+        <category>linux</category>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/25/IS/%E8%B5%84%E4%BA%A7%E6%94%B6%E9%9B%86/</guid>
+            <title>资产收集</title>
+            <link>https://liuhuo23.github.io/2022/01/25/IS/%E8%B5%84%E4%BA%A7%E6%94%B6%E9%9B%86/</link>
+            <category>搜索</category>
+            <pubDate>Tue, 25 Jan 2022 19:17:46 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/17/web%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/</guid>
+            <title>web服务搭建</title>
+            <link>https://liuhuo23.github.io/2022/01/17/web%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/</link>
+            <category>服务器</category>
+            <pubDate>Mon, 17 Jan 2022 11:31:22 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;image-20220117114258688.png&#34; alt=&#34;image-20220117114258688&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://liuhuo23.github.io/2022/01/13/%E5%AE%89%E5%85%A8%E7%90%86%E8%AE%BA/</guid>
             <title>安全理论</title>

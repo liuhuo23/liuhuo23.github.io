@@ -11,6 +11,13 @@
     <category term="操作系统" />
     <category term="网络" />
     <category term="IP" />
+    <category term="socket" />
+    <category term="rust" />
+    <category term="服务器" />
+    <category term="搜索" />
+    <category term="密码" />
+    <category term="trait" />
+    <category term="linux" />
     <entry>
         <id>https://liuhuo23.github.io/2022/01/15/MySQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</id>
         <title>MySQL基础语法</title>
