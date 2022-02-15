@@ -19,22 +19,11 @@
     <category term="trait" />
     <category term="linux" />
     <entry>
-        <id>https://liuhuo23.github.io/2022/01/13/%E5%AE%89%E5%85%A8%E7%90%86%E8%AE%BA/</id>
+        <id>https://liuhuo23.github.io/2022/01/13/IS/%E5%AE%89%E5%85%A8%E7%90%86%E8%AE%BA/</id>
         <title>安全理论</title>
-        <link rel="alternate" href="https://liuhuo23.github.io/2022/01/13/%E5%AE%89%E5%85%A8%E7%90%86%E8%AE%BA/"/>
+        <link rel="alternate" href="https://liuhuo23.github.io/2022/01/13/IS/%E5%AE%89%E5%85%A8%E7%90%86%E8%AE%BA/"/>
         <content type="html"></content>
         <category term="信息安全" />
         <updated>2022-01-13T12:13:59.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://liuhuo23.github.io/2022/01/13/%E6%B5%8B%E8%AF%95/</id>
-        <title>测试</title>
-        <link rel="alternate" href="https://liuhuo23.github.io/2022/01/13/%E6%B5%8B%E8%AF%95/"/>
-        <content type="html">&lt;h1 id=&#34;hello&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hello&#34;&gt;#&lt;/a&gt; hello&lt;/h1&gt;
-&lt;p&gt;中与重耕了&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/123.jpeg&#34; alt=&#34;123&#34;&gt;&lt;/p&gt;
-</content>
-        <category term="信息安全" />
-        <updated>2022-01-13T11:56:28.000Z</updated>
     </entry>
 </feed>
