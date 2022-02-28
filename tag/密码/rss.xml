@@ -22,6 +22,11 @@
         <category>trait</category>
         <category>linux</category>
         <category>PHP</category>
+        <category>渗透</category>
+        <category>破解密码</category>
+        <category>nmap</category>
+        <category>vue</category>
+        <category>electron</category>
         <item>
             <guid isPermalink="true">https://liuhuo23.github.io/2022/02/09/cryptography/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%B8%80/</guid>
             <title>密码学一</title>

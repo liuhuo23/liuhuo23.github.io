@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"electron\" tag",
+    "description": "",
+    "home_page_url": "https://liuhuo23.github.io",
+    "items": [
+        {
+            "id": "https://liuhuo23.github.io/2022/02/16/programe/vue+electron%20%E7%9A%84%E6%90%AD%E5%BB%BA/",
+            "url": "https://liuhuo23.github.io/2022/02/16/programe/vue+electron%20%E7%9A%84%E6%90%AD%E5%BB%BA/",
+            "title": "vue+electron的搭建",
+            "date_published": "2022-02-16T11:32:33.000Z",
+            "content_html": "<h1 id=\"环境搭建\"><a class=\"anchor\" href=\"#环境搭建\">#</a> 环境搭建</h1>\n<h2 id=\"1-安装-nodejs\"><a class=\"anchor\" href=\"#1-安装-nodejs\">#</a> 1. 安装 Nodejs</h2>\n<p>Node.js 安装包及源码下载地址为：<span class=\"exturl\" data-url=\"aHR0cHM6Ly9ub2RlanMub3JnL2VuL2Rvd25sb2FkLyVFMyU4MCU4Mg==\">https://nodejs.org/en/download/。</span></p>\n<p><img data-src=\"https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/vue-1.jpg\" alt=\"img\"> 下载完成后，双击打开，在软件安装位置修改为自己想安装的位置，最好不要安装在 C 盘。</p>\n<p>然后一路默认。</p>\n<figure class=\"highlight shell\"><figcaption data-lang=\"Bash\"></figcaption><table><tbody><tr><td data-num=\"1\"></td><td><pre><span class=\"token function\">node</span> --version</pre></td></tr></tbody></table></figure><p>如果显示 版本号，那就成功了。</p>\n<p>如果输出该命令找不到 那就得配置环境变量。 这儿不表，可以百度</p>\n<h2 id=\"安装vue开发环境\"><a class=\"anchor\" href=\"#安装vue开发环境\">#</a> 安装 Vue 开发环境</h2>\n<p>npm 的默认源是国外，非常慢。所以要换源</p>\n<figure class=\"highlight shell\"><figcaption data-lang=\"Bash\"></figcaption><table><tbody><tr><td data-num=\"1\"></td><td><pre><span class=\"token function\">npm</span> config <span class=\"token builtin class-name\">set</span> registry https://registry.npm.taobao.org/</pre></td></tr></tbody></table></figure><p>然后输入  <code>npm config get registry</code>  输出跟你修改的一样即成功</p>\n<p>安装 脚手架工具：</p>\n<figure class=\"highlight shell\"><figcaption data-lang=\"Bash\"></figcaption><table><tbody><tr><td data-num=\"1\"></td><td><pre><span class=\"token function\">npm</span> <span class=\"token function\">install</span> -g</pre></td></tr></tbody></table></figure>",
+            "tags": [
+                "vue",
+                "electron"
+            ]
+        }
+    ]
+}

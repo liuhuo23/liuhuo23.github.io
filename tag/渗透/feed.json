@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"渗透\" tag",
+    "description": "",
+    "home_page_url": "https://liuhuo23.github.io",
+    "items": [
+        {
+            "id": "https://liuhuo23.github.io/2022/01/25/IS/%E6%B8%97%E9%80%8F1/",
+            "url": "https://liuhuo23.github.io/2022/01/25/IS/%E6%B8%97%E9%80%8F1/",
+            "title": "渗透1",
+            "date_published": "2022-01-25T11:17:46.000Z",
+            "content_html": "<h1 id=\"黑客三字经\"><a class=\"anchor\" href=\"#黑客三字经\">#</a> 黑客三字经</h1>\n<h2 id=\"老黑客三字经\"><a class=\"anchor\" href=\"#老黑客三字经\">#</a> 老黑客三字经</h2>\n<p>进谷歌 找注入</p>\n<p>没注入 就旁注</p>\n<p>没旁注 就 0day</p>\n<p>没 0day 猜目录</p>\n<p>没目录 就嗅探</p>\n<p>爆账户 找后台</p>\n<p>传小马 放大马</p>\n<p>那权限 挂页面</p>\n<p>放暗链 清数据</p>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvZjBjYTk4MTUtNTc4Mi00Nzg1LTk5MDAtNGE1MGFmOTQzNTExPyMlRUYlQkMlODglRTUlQUYlODYlRTclQTAlODElRUYlQkMlOUFjcjJ1JUVGJUJDJTg5\">https://www.yuque.com/docs/share/f0ca9815-5782-4785-9900-4a50af943511?#（密码：cr2u）</span> 《黑客三字经》</p>\n<h1 id=\"渗透流程\"><a class=\"anchor\" href=\"#渗透流程\">#</a> 渗透流程</h1>\n<h2 id=\"流程\"><a class=\"anchor\" href=\"#流程\">#</a> 流程</h2>\n<p>国内标准</p>\n<p><img data-src=\"https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F\" alt=\"image.png\"></p>\n<p>国外标准：</p>\n<p><img data-src=\"https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F2\" alt=\"img\"></p>\n<h2 id=\"1-确定目标\"><a class=\"anchor\" href=\"#1-确定目标\">#</a> 1： 确定目标</h2>\n<table>\n<thead>\n<tr>\n<th>渗透目标</th>\n<th>常见应用</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>操作系统</td>\n<td>Linux 主机 /windows 主机</td>\n</tr>\n<tr>\n<td>数据库系统</td>\n<td>SQL Server/MySql/Oracle/DB2/PostgreSQL</td>\n</tr>\n<tr>\n<td>应用系统</td>\n<td>FTP/DNS/DHCP/WEB/RDP</td>\n</tr>\n<tr>\n<td>网络设备</td>\n<td>防火墙 / 入侵检测系统 / 交换机 / 路由器</td>\n</tr>\n</tbody>\n</table>\n<p><mark>风险规避</mark></p>\n<ol>\n<li>明确渗透测试范围</li>\n<li>测试之前对重要数据进行备份</li>\n<li>不要进行 DDos/CC 攻击，不破坏数据</li>\n<li>可以对原始系统生成镜像环境，然后对镜像环境进行测试</li>\n<li>任何测试执行之前必须和客户进行沟通，以免引来不必要的麻烦</li>\n</ol>\n<h2 id=\"2信息收集\"><a class=\"anchor\" href=\"#2信息收集\">#</a> 2：信息收集</h2>\n<ol>\n<li></li>\n</ol>\n",
+            "tags": [
+                "渗透"
+            ]
+        },
+        {
+            "id": "https://liuhuo23.github.io/2022/01/15/%E6%8A%80%E5%B7%A7/%E4%BB%A3%E7%A0%81%E4%BC%AA%E8%A3%85/",
+            "url": "https://liuhuo23.github.io/2022/01/15/%E6%8A%80%E5%B7%A7/%E4%BB%A3%E7%A0%81%E4%BC%AA%E8%A3%85/",
+            "title": "代码伪装",
+            "date_published": "2022-01-15T01:50:48.000Z",
+            "content_html": "<div class=\"hbe hbe-container\" id=\"hexo-blog-encrypt\" data-wpm=\"Oh, this is an invalid password. Check and try again, please.\" data-whm=\"OOPS, these decrypted content may changed, but you can still have a look.\">\n  <script id=\"hbeData\" type=\"hbeData\" data-hmacdigest=\"875fc46b3f2974b0396ded180180a3a8d044ae05a4d1afffbf29706d4aa1188d\">2bf780c3b0cb82cc98ebc9ec721f63a65b4677c8256f02376fb1231f21330dc26fd35315fa072d530378784a8483b78630bb00d358b321e5100919708cbfb902889324cbdf44399bf38246b56a61c30774d171074ee429c240cc2242463bc3de0e66faf51f22dad25163eedfacbc8af6</script>\n  <div class=\"hbe hbe-content\">\n    <div class=\"hbe hbe-input hbe-input-default\">\n      <input class=\"hbe hbe-input-field hbe-input-field-default\" type=\"password\" id=\"hbePass\">\n      <label class=\"hbe hbe-input-label hbe-input-label-default\" for=\"hbePass\">\n        <span class=\"hbe hbe-input-label-content hbe-input-label-content-default\">Hey, password is required here.</span>\n      </label>\n    </div>\n  </div>\n</div>\n<script data-pjax src=\"/lib/hbe.js\"></script><link href=\"/css/hbe.style.css\" rel=\"stylesheet\" type=\"text/css\">",
+            "tags": [
+                "渗透"
+            ]
+        }
+    ]
+}

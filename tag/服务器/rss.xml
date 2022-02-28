@@ -22,6 +22,11 @@
         <category>trait</category>
         <category>linux</category>
         <category>PHP</category>
+        <category>渗透</category>
+        <category>破解密码</category>
+        <category>nmap</category>
+        <category>vue</category>
+        <category>electron</category>
         <item>
             <guid isPermalink="true">https://liuhuo23.github.io/2022/01/17/IS/web%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/</guid>
             <title>web服务搭建</title>

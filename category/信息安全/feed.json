@@ -15,6 +15,27 @@
             ]
         },
         {
+            "id": "https://liuhuo23.github.io/2022/01/25/IS/%E6%B8%97%E9%80%8F1/",
+            "url": "https://liuhuo23.github.io/2022/01/25/IS/%E6%B8%97%E9%80%8F1/",
+            "title": "渗透1",
+            "date_published": "2022-01-25T11:17:46.000Z",
+            "content_html": "<h1 id=\"黑客三字经\"><a class=\"anchor\" href=\"#黑客三字经\">#</a> 黑客三字经</h1>\n<h2 id=\"老黑客三字经\"><a class=\"anchor\" href=\"#老黑客三字经\">#</a> 老黑客三字经</h2>\n<p>进谷歌 找注入</p>\n<p>没注入 就旁注</p>\n<p>没旁注 就 0day</p>\n<p>没 0day 猜目录</p>\n<p>没目录 就嗅探</p>\n<p>爆账户 找后台</p>\n<p>传小马 放大马</p>\n<p>那权限 挂页面</p>\n<p>放暗链 清数据</p>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvZjBjYTk4MTUtNTc4Mi00Nzg1LTk5MDAtNGE1MGFmOTQzNTExPyMlRUYlQkMlODglRTUlQUYlODYlRTclQTAlODElRUYlQkMlOUFjcjJ1JUVGJUJDJTg5\">https://www.yuque.com/docs/share/f0ca9815-5782-4785-9900-4a50af943511?#（密码：cr2u）</span> 《黑客三字经》</p>\n<h1 id=\"渗透流程\"><a class=\"anchor\" href=\"#渗透流程\">#</a> 渗透流程</h1>\n<h2 id=\"流程\"><a class=\"anchor\" href=\"#流程\">#</a> 流程</h2>\n<p>国内标准</p>\n<p><img data-src=\"https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F\" alt=\"image.png\"></p>\n<p>国外标准：</p>\n<p><img data-src=\"https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F2\" alt=\"img\"></p>\n<h2 id=\"1-确定目标\"><a class=\"anchor\" href=\"#1-确定目标\">#</a> 1： 确定目标</h2>\n<table>\n<thead>\n<tr>\n<th>渗透目标</th>\n<th>常见应用</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>操作系统</td>\n<td>Linux 主机 /windows 主机</td>\n</tr>\n<tr>\n<td>数据库系统</td>\n<td>SQL Server/MySql/Oracle/DB2/PostgreSQL</td>\n</tr>\n<tr>\n<td>应用系统</td>\n<td>FTP/DNS/DHCP/WEB/RDP</td>\n</tr>\n<tr>\n<td>网络设备</td>\n<td>防火墙 / 入侵检测系统 / 交换机 / 路由器</td>\n</tr>\n</tbody>\n</table>\n<p><mark>风险规避</mark></p>\n<ol>\n<li>明确渗透测试范围</li>\n<li>测试之前对重要数据进行备份</li>\n<li>不要进行 DDos/CC 攻击，不破坏数据</li>\n<li>可以对原始系统生成镜像环境，然后对镜像环境进行测试</li>\n<li>任何测试执行之前必须和客户进行沟通，以免引来不必要的麻烦</li>\n</ol>\n<h2 id=\"2信息收集\"><a class=\"anchor\" href=\"#2信息收集\">#</a> 2：信息收集</h2>\n<ol>\n<li></li>\n</ol>\n",
+            "tags": [
+                "渗透"
+            ]
+        },
+        {
+            "id": "https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/",
+            "url": "https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/",
+            "title": "记一次密码破解",
+            "date_published": "2022-01-25T11:17:46.000Z",
+            "content_html": "<h1 id=\"记一次密码破解\"><a class=\"anchor\" href=\"#记一次密码破解\">#</a> 记一次密码破解</h1>\n<h2 id=\"nmap-简单用法\"><a class=\"anchor\" href=\"#nmap-简单用法\">#</a> nmap 简单用法</h2>\n<p>nmap -v 详细信息输出<br>\n nmap -p 指定端口<br>\n nmap -iL 扫描文件中的 ip<br>\nnmap -exclude 不扫描某些 ip<br>\nnmap -Pn 使用 ping 扫描，显式地关闭端口扫描，用于主机发现<br>\n nmap -sn 使用 ping 扫描，进行端口扫描，假设主机都是 up 的<br>\n nmap -sS 使用 SYN 扫描，不需要完成三次握手<br>\n nmap -sT TCP connect 扫描，需要完成三次握手，只适用于找出 TCP 和 UDP 端口<br>\n nmap -sU 扫描 UDP 端口<br>\n nmap -sF FIN 扫描，用于探测防火墙状态，识别端口是否关闭，容易漏扫<br>\n nmap -sV 扫描目标主机的端口和软件版本<br>\n nmap -O 远程检测操作系统和软件<br>\n nmap -O --osscan-guess 猜测目标操作系统版本<br>\n nmap -traceroute 路由跟踪<br>\n nmap -A 综合扫描，包含 1-10000 的端口 ping 扫描，操作系统扫描，脚本扫描，路由跟踪，服务探测<br>\n nmap -oN result.txt 将标准输出写入到指定文件中<br>\n nmap -oX result.xml 将输入写成 xml 的形式<br>\n nmap -oS result.txt 将输出写成特殊符号的形式，内容跟 - oN 是一样的，只是字体变了而已<br>\n nmap -oG result.txt 将输出写成特殊格式<br>\n nmap -oA 将输出所有格式，有三种 .xml/.gnmap/ .nmap<br>\nnmap -T [0-5] 时间参数模板<br>\n - T0 用于躲避 IDS，时间很长<br>\n - T1 用于躲避 IDS，时间很长<br>\n - T2 降低了扫描速度，使用更小的带宽和目标主机资源对目标靶机进行扫描<br>\n - T3 默认模式，未做优化<br>\n - T4 假设用户具有合适及可靠的网络而加速对目标靶机的扫描<br>\n - T5 假设用户具有更好的网络或者愿意牺牲准确性而加速扫描<br>\n nmap -sC 根据端口识别服务自动调用默认脚本<br>\n nmap --script</p>\n<p>作者：Pino_HD<br>\n 链接：<span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC80YzY5NmIxYTk1YjE=\">https://www.jianshu.com/p/4c696b1a95b1</span><br>\n 来源：简书<br>\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>\n<h2 id=\"开始进行破解\"><a class=\"anchor\" href=\"#开始进行破解\">#</a> 开始进行破解</h2>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tbody><tr><td data-num=\"1\"></td><td><pre>nmap -O  <span class=\"token number\">192.168</span>.1.0/24 -oN nmap_scan_1.txt //扫描当前局域网下的所有主机</pre></td></tr><tr><td data-num=\"2\"></td><td><pre><span class=\"token function\">grep</span> MAC nmap_scan_1.txt //过滤信息，获得IP以及对应的 系统</pre></td></tr></tbody></table></figure>",
+            "tags": [
+                "破解密码",
+                "nmap"
+            ]
+        },
+        {
             "id": "https://liuhuo23.github.io/2022/01/17/IS/web%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/",
             "url": "https://liuhuo23.github.io/2022/01/17/IS/web%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/",
             "title": "web服务搭建",

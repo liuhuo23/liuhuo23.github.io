@@ -19,6 +19,11 @@
     <category term="trait" />
     <category term="linux" />
     <category term="PHP" />
+    <category term="渗透" />
+    <category term="破解密码" />
+    <category term="nmap" />
+    <category term="vue" />
+    <category term="electron" />
     <entry>
         <id>https://liuhuo23.github.io/2022/01/16/computer-science/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/</id>
         <title>操作系统基本知识</title>

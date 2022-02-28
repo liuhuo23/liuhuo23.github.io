@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"nmap\" tag",
+    "description": "",
+    "home_page_url": "https://liuhuo23.github.io",
+    "items": [
+        {
+            "id": "https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/",
+            "url": "https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/",
+            "title": "记一次密码破解",
+            "date_published": "2022-01-25T11:17:46.000Z",
+            "content_html": "<h1 id=\"记一次密码破解\"><a class=\"anchor\" href=\"#记一次密码破解\">#</a> 记一次密码破解</h1>\n<h2 id=\"nmap-简单用法\"><a class=\"anchor\" href=\"#nmap-简单用法\">#</a> nmap 简单用法</h2>\n<p>nmap -v 详细信息输出<br>\n nmap -p 指定端口<br>\n nmap -iL 扫描文件中的 ip<br>\nnmap -exclude 不扫描某些 ip<br>\nnmap -Pn 使用 ping 扫描，显式地关闭端口扫描，用于主机发现<br>\n nmap -sn 使用 ping 扫描，进行端口扫描，假设主机都是 up 的<br>\n nmap -sS 使用 SYN 扫描，不需要完成三次握手<br>\n nmap -sT TCP connect 扫描，需要完成三次握手，只适用于找出 TCP 和 UDP 端口<br>\n nmap -sU 扫描 UDP 端口<br>\n nmap -sF FIN 扫描，用于探测防火墙状态，识别端口是否关闭，容易漏扫<br>\n nmap -sV 扫描目标主机的端口和软件版本<br>\n nmap -O 远程检测操作系统和软件<br>\n nmap -O --osscan-guess 猜测目标操作系统版本<br>\n nmap -traceroute 路由跟踪<br>\n nmap -A 综合扫描，包含 1-10000 的端口 ping 扫描，操作系统扫描，脚本扫描，路由跟踪，服务探测<br>\n nmap -oN result.txt 将标准输出写入到指定文件中<br>\n nmap -oX result.xml 将输入写成 xml 的形式<br>\n nmap -oS result.txt 将输出写成特殊符号的形式，内容跟 - oN 是一样的，只是字体变了而已<br>\n nmap -oG result.txt 将输出写成特殊格式<br>\n nmap -oA 将输出所有格式，有三种 .xml/.gnmap/ .nmap<br>\nnmap -T [0-5] 时间参数模板<br>\n - T0 用于躲避 IDS，时间很长<br>\n - T1 用于躲避 IDS，时间很长<br>\n - T2 降低了扫描速度，使用更小的带宽和目标主机资源对目标靶机进行扫描<br>\n - T3 默认模式，未做优化<br>\n - T4 假设用户具有合适及可靠的网络而加速对目标靶机的扫描<br>\n - T5 假设用户具有更好的网络或者愿意牺牲准确性而加速扫描<br>\n nmap -sC 根据端口识别服务自动调用默认脚本<br>\n nmap --script</p>\n<p>作者：Pino_HD<br>\n 链接：<span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC80YzY5NmIxYTk1YjE=\">https://www.jianshu.com/p/4c696b1a95b1</span><br>\n 来源：简书<br>\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>\n<h2 id=\"开始进行破解\"><a class=\"anchor\" href=\"#开始进行破解\">#</a> 开始进行破解</h2>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tbody><tr><td data-num=\"1\"></td><td><pre>nmap -O  <span class=\"token number\">192.168</span>.1.0/24 -oN nmap_scan_1.txt //扫描当前局域网下的所有主机</pre></td></tr><tr><td data-num=\"2\"></td><td><pre><span class=\"token function\">grep</span> MAC nmap_scan_1.txt //过滤信息，获得IP以及对应的 系统</pre></td></tr></tbody></table></figure>",
+            "tags": [
+                "破解密码",
+                "nmap"
+            ]
+        }
+    ]
+}

@@ -19,6 +19,11 @@
     <category term="trait" />
     <category term="linux" />
     <category term="PHP" />
+    <category term="渗透" />
+    <category term="破解密码" />
+    <category term="nmap" />
+    <category term="vue" />
+    <category term="electron" />
     <entry>
         <id>https://liuhuo23.github.io/2022/01/26/rust/rust-%E5%B8%B8%E7%94%A8trait/</id>
         <title>rust-常用trait</title>

@@ -19,6 +19,11 @@
     <category term="trait" />
     <category term="linux" />
     <category term="PHP" />
+    <category term="渗透" />
+    <category term="破解密码" />
+    <category term="nmap" />
+    <category term="vue" />
+    <category term="electron" />
     <entry>
         <id>https://liuhuo23.github.io/2022/01/15/MySQL/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/</id>
         <title>mysql数据库笔记</title>

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Hexo • Posts by &#34;破解密码&#34; tag</title>
+        <link>https://liuhuo23.github.io</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 25 Jan 2022 19:17:46 +0800</pubDate>
+        <lastBuildDate>Tue, 25 Jan 2022 19:17:46 +0800</lastBuildDate>
+        <category>MySQL</category>
+        <category>web</category>
+        <category>web容器</category>
+        <category>信息安全</category>
+        <category>操作系统</category>
+        <category>网络</category>
+        <category>IP</category>
+        <category>socket</category>
+        <category>rust</category>
+        <category>服务器</category>
+        <category>搜索</category>
+        <category>密码</category>
+        <category>trait</category>
+        <category>linux</category>
+        <category>PHP</category>
+        <category>渗透</category>
+        <category>破解密码</category>
+        <category>nmap</category>
+        <category>vue</category>
+        <category>electron</category>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/</guid>
+            <title>记一次密码破解</title>
+            <link>https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/</link>
+            <category>破解密码</category>
+            <category>nmap</category>
+            <pubDate>Tue, 25 Jan 2022 19:17:46 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;记一次密码破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#记一次密码破解&#34;&gt;#&lt;/a&gt; 记一次密码破解&lt;/h1&gt;
+&lt;h2 id=&#34;nmap-简单用法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nmap-简单用法&#34;&gt;#&lt;/a&gt; nmap 简单用法&lt;/h2&gt;
+&lt;p&gt;nmap -v 详细信息输出&lt;br&gt;
+ nmap -p 指定端口&lt;br&gt;
+ nmap -iL 扫描文件中的 ip&lt;br&gt;
+nmap -exclude 不扫描某些 ip&lt;br&gt;
+nmap -Pn 使用 ping 扫描，显式地关闭端口扫描，用于主机发现&lt;br&gt;
+ nmap -sn 使用 ping 扫描，进行端口扫描，假设主机都是 up 的&lt;br&gt;
+ nmap -sS 使用 SYN 扫描，不需要完成三次握手&lt;br&gt;
+ nmap -sT TCP connect 扫描，需要完成三次握手，只适用于找出 TCP 和 UDP 端口&lt;br&gt;
+ nmap -sU 扫描 UDP 端口&lt;br&gt;
+ nmap -sF FIN 扫描，用于探测防火墙状态，识别端口是否关闭，容易漏扫&lt;br&gt;
+ nmap -sV 扫描目标主机的端口和软件版本&lt;br&gt;
+ nmap -O 远程检测操作系统和软件&lt;br&gt;
+ nmap -O --osscan-guess 猜测目标操作系统版本&lt;br&gt;
+ nmap -traceroute 路由跟踪&lt;br&gt;
+ nmap -A 综合扫描，包含 1-10000 的端口 ping 扫描，操作系统扫描，脚本扫描，路由跟踪，服务探测&lt;br&gt;
+ nmap -oN result.txt 将标准输出写入到指定文件中&lt;br&gt;
+ nmap -oX result.xml 将输入写成 xml 的形式&lt;br&gt;
+ nmap -oS result.txt 将输出写成特殊符号的形式，内容跟 - oN 是一样的，只是字体变了而已&lt;br&gt;
+ nmap -oG result.txt 将输出写成特殊格式&lt;br&gt;
+ nmap -oA 将输出所有格式，有三种 .xml/.gnmap/ .nmap&lt;br&gt;
+nmap -T [0-5] 时间参数模板&lt;br&gt;
+ - T0 用于躲避 IDS，时间很长&lt;br&gt;
+ - T1 用于躲避 IDS，时间很长&lt;br&gt;
+ - T2 降低了扫描速度，使用更小的带宽和目标主机资源对目标靶机进行扫描&lt;br&gt;
+ - T3 默认模式，未做优化&lt;br&gt;
+ - T4 假设用户具有合适及可靠的网络而加速对目标靶机的扫描&lt;br&gt;
+ - T5 假设用户具有更好的网络或者愿意牺牲准确性而加速扫描&lt;br&gt;
+ nmap -sC 根据端口识别服务自动调用默认脚本&lt;br&gt;
+ nmap --script&lt;/p&gt;
+&lt;p&gt;作者：Pino_HD&lt;br&gt;
+ 链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC80YzY5NmIxYTk1YjE=&#34;&gt;https://www.jianshu.com/p/4c696b1a95b1&lt;/span&gt;&lt;br&gt;
+ 来源：简书&lt;br&gt;
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
+&lt;h2 id=&#34;开始进行破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始进行破解&#34;&gt;#&lt;/a&gt; 开始进行破解&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -O  &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.0/24 -oN nmap_scan_1.txt //扫描当前局域网下的所有主机&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; MAC nmap_scan_1.txt //过滤信息，获得IP以及对应的 系统&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+    </channel>
+</rss>

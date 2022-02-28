@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>PHP-MySQL</title>
+      <link href="/2022/02/16/programe/PHP-MySQL/"/>
+      <url>/2022/02/16/programe/PHP-MySQL/</url>
+      
+        <content type="html"><![CDATA[<h1 id="php-连接mysql"><a class="anchor" href="#php-连接mysql">#</a> PHP 连接 MySQL</h1><h2 id="一-mysqli-面向对象"><a class="anchor" href="#一-mysqli-面向对象">#</a> 一： MySQLi- 面向对象</h2><h3 id="11-使用前基本配置"><a class="anchor" href="#11-使用前基本配置">#</a> 1.1 使用前基本配置</h3><p><strong>在 php.ini 中开启 mysqli 扩展</strong></p><figure class="highlight ini"><figcaption data-lang="ini"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token key attr-name">extension</span><span class="token punctuation">=</span><span class="token value attr-value">php_mysqli.dll</span></pre></td></tr></tbody></table></figure><p>重启服务器</p><p>然后，创建数据库</p><figure class="highlight sql"><figcaption data-lang="SQL"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token keyword">create</span> <span class="token keyword">database</span> mysqli<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">create</span> <span class="token keyword">table</span> news<span class="token punctuation">(</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    id <span class="token keyword">int</span> <span class="token keyword">unsigned</span> <span class="token keyword">auto_increment</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">comment</span> <span class="token identifier"><span class="token punctuation">`</span>主键<span class="token punctuation">`</span></span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    title <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword">comment</span> <span class="token identifier"><span class="token punctuation">`</span>标题<span class="token punctuation">`</span></span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    content <span class="token keyword">text</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword">comment</span> <span class="token identifier"><span class="token punctuation">`</span>内容<span class="token punctuation">`</span></span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">)</span><span class="token keyword">engine</span><span class="token operator">=</span><span class="token keyword">Innodb</span> <span class="token keyword">charset</span><span class="token operator">=</span>utf8 <span class="token keyword">comment</span> <span class="token identifier"><span class="token punctuation">`</span>新闻表<span class="token punctuation">`</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment">// 插入数据</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">insert</span> <span class="token keyword">into</span> news <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token boolean">null</span><span class="token punctuation">,</span><span class="token string">'sanguo'</span><span class="token punctuation">,</span><span class="token string">'caocao'</span><span class="token punctuation">,</span>unix_timestamp<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">insert</span> <span class="token keyword">into</span> news <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token boolean">null</span><span class="token punctuation">,</span><span class="token string">'shuihu'</span><span class="token punctuation">,</span><span class="token string">'luzhishen'</span><span class="token punctuation">,</span>unix_timestamp<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></tbody></table></figure><h3 id="12-连接数据库"><a class="anchor" href="#12-连接数据库">#</a> 1.2 连接数据库</h3><p>连接代码如下：</p><figure class="highlight php"><figcaption data-lang="PHP"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token php language-php"><span class="token delimiter important">&lt;?php</span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token variable">$servername</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"localhost"</span><span class="token punctuation">;</span> <span class="token comment">// 主机</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token variable">$username</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"username"</span><span class="token punctuation">;</span> <span class="token comment">// 用户名</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token variable">$password</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"password"</span><span class="token punctuation">;</span> <span class="token comment">// 密码</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token variable">$dataname</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"data"</span><span class="token punctuation">;</span><span class="token comment">// 数据库</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token variable">$con</span> <span class="token operator">=</span> <span class="token function">mysqli_connect</span><span class="token punctuation">(</span><span class="token variable">$servername</span><span class="token punctuation">,</span><span class="token variable">$username</span><span class="token punctuation">,</span><span class="token variable">$password</span><span class="token punctuation">,</span><span class="token variable">$dataname</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token variable">$con</span><span class="token punctuation">)</span><span class="token punctuation">{</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"连接失败:"</span><span class="token operator">.</span><span class="token function">mysqli_connect_err</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token punctuation">}</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token function">mysqli_set_charset</span><span class="token punctuation">(</span><span class="token variable">$con</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'urf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token delimiter important">?&gt;</span></pre></td></tr></tbody></table></figure><p>解析：</p><figure class="highlight php"><figcaption data-lang="PHP"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token comment">/*</span></pre></td></tr><tr><td data-num="2"></td><td><pre>mysqli_connect (主机地址，用户，密码，数据库名，端口号); 如果端口号 默认是 3306 可以不写</pre></td></tr><tr><td data-num="3"></td><td><pre>连接成功会返回一个资源，不成功会返回一个 bool 值</pre></td></tr><tr><td data-num="4"></td><td><pre>mysqli_connect_error () ; 返回错误信息</pre></td></tr><tr><td data-num="5"></td><td><pre>mysqli_connect_errno (); 返回错误编码</pre></td></tr><tr><td data-num="6"></td><td><pre>mysqli_set_charset (数据库资源变量，编码)； // 设置数据库名 数据库资源变量就是连接成功后获得的变量，后面是 字符编码</pre></td></tr><tr><td data-num="7"></td><td><pre>*/</pre></td></tr></tbody></table></figure><h3 id="13-数据操作语句"><a class="anchor" href="#13-数据操作语句">#</a> 1.3 数据操作语句</h3><ul><li>通过 mysqli_query (数据库资源，sql 语句) 执行查询语句</li><li>增，删，改语句执行成功返回 true，失败返回 false</li></ul><figure class="highlight php"><figcaption data-lang="PHP"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token php language-php"><span class="token delimiter important">&lt;?php</span></span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token variable">$con</span> <span class="token operator">=</span> <span class="token function">mysqli_connect</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'localhost'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'root'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'mima'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'data'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token variable">$con</span><span class="token punctuation">)</span><span class="token punctuation">{</span></pre></td></tr><tr><td data-num="4"></td><td><pre>        <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"连接失败："</span><span class="token operator">.</span><span class="token function">mysqli_connect_error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        <span class="token keyword">exit</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token punctuation">}</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token variable">$res</span> <span class="token operator">=</span> <span class="token function">mysqli_query</span><span class="token punctuation">(</span><span class="token variable">$con</span><span class="token punctuation">,</span><span class="token string double-quoted-string">"insert into news values(null,'sanguo','caocao',unix_timestamp());"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$res</span><span class="token punctuation">)</span><span class="token punctuation">{</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token keyword">echo</span> <span class="token string double-quoted-string">"插入成功&lt;br/&gt;"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">}</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token comment">// 执行 SQL 语句</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token comment">// 执行 insert 语句 </span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token variable">$rs</span><span class="token operator">=</span><span class="token function">mysqli_query</span><span class="token punctuation">(</span><span class="token variable">$con</span><span class="token punctuation">,</span><span class="token string double-quoted-string">"insert into news values (null,'静夜思','床 前明月光',unix_timestamp())"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span> </pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token keyword">echo</span> <span class="token string single-quoted-string">'自动增长的编号是：'</span><span class="token operator">.</span><span class="token function">mysqli_insert_id</span><span class="token punctuation">(</span><span class="token variable">$con</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 获取最近一次插入记录的 id 值</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token comment">// 执行 update 语句 </span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token variable">$rs</span><span class="token operator">=</span><span class="token function">mysqli_query</span><span class="token punctuation">(</span><span class="token variable">$link</span><span class="token punctuation">,</span><span class="token string double-quoted-string">"update news set content='疑是地上霜' where id=4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span> </pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token keyword">echo</span> <span class="token string single-quoted-string">'受影响的记录数是：'</span><span class="token operator">.</span><span class="token function">mysqli_affected_rows</span><span class="token punctuation">(</span><span class="token variable">$con</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回最近一次 增删改的影响的行数</span></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token keyword">else</span><span class="token punctuation">{</span></pre></td></tr><tr><td data-num="21"></td><td><pre><span class="token comment">// 数据查询用 select、desc、show，成功会返回结果集，失败返回 false </span></pre></td></tr><tr><td data-num="22"></td><td><pre>        <span class="token keyword">echo</span> <span class="token string single-quoted-string">'错误码：'</span><span class="token operator">.</span><span class="token function">mysqli_errno</span><span class="token punctuation">(</span><span class="token variable">$link</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'&lt;br&gt;'</span><span class="token punctuation">;</span> </pre></td></tr><tr><td data-num="23"></td><td><pre>        <span class="token keyword">echo</span> <span class="token string single-quoted-string">'错误信息：'</span><span class="token operator">.</span><span class="token function">mysqli_error</span><span class="token punctuation">(</span><span class="token variable">$link</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>    <span class="token punctuation">}</span></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token comment">// 查询数据</span></pre></td></tr><tr><td data-num="26"></td><td><pre><span class="token variable">$rs</span> <span class="token operator">=</span> <span class="token function">mysqli_query</span><span class="token punctuation">(</span><span class="token variable">$con</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'select * from news'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="27"></td><td><pre><span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出 $rs 的类别  结果：  object (mysqli_result)</span></pre></td></tr><tr><td data-num="28"></td><td><pre><span class="token comment">// 获取对象中的数据</span></pre></td></tr><tr><td data-num="29"></td><td><pre><span class="token comment">// 将对象中的一条数据匹配成索引数组，指针下移一条</span></pre></td></tr><tr><td data-num="30"></td><td><pre><span class="token variable">$rows</span> <span class="token operator">=</span> <span class="token function">mysqli_fetch_row</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre><span class="token comment">// 将对象中的一条数据集匹配成关联数组，指针下移一条</span></pre></td></tr><tr><td data-num="32"></td><td><pre><span class="token variable">$rows</span><span class="token operator">=</span><span class="token function">mysqli_fetch_assoc</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="33"></td><td><pre><span class="token comment">// 将对象中的一条数据匹配成索引，关联数据，指针下移一条</span></pre></td></tr><tr><td data-num="34"></td><td><pre><span class="token variable">$rows</span> <span class="token operator">=</span> <span class="token function">mysqli_fetch_array</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre><span class="token keyword">echo</span> <span class="token string single-quoted-string">'总行数'</span><span class="token operator">.</span><span class="token function">mysqli_num_rows</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </pre></td></tr><tr><td data-num="36"></td><td><pre><span class="token keyword">echo</span> <span class="token string single-quoted-string">'总列数'</span><span class="token operator">.</span><span class="token function">mysqli_num_fields</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="37"></td><td><pre><span class="token comment">// 获取所有数据</span></pre></td></tr><tr><td data-num="38"></td><td><pre><span class="token variable">$list</span> <span class="token operator">=</span> <span class="token function">mysqli_fetch_all</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 默认是索引数组</span></pre></td></tr><tr><td data-num="39"></td><td><pre><span class="token function">mysqli_free_result</span><span class="token punctuation">(</span><span class="token variable">$rs</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 销毁结果集</span></pre></td></tr><tr><td data-num="40"></td><td><pre><span class="token comment">// 关闭连接</span></pre></td></tr><tr><td data-num="41"></td><td><pre><span class="token function">mysqli_close</span><span class="token punctuation">(</span><span class="token variable">$con</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取最近一次执行增，删，改，影响的记录数</span></pre></td></tr><tr><td data-num="42"></td><td><pre><span class="token delimiter important">?&gt;</span></pre></td></tr></tbody></table></figure><h2 id="二-pdo"><a class="anchor" href="#二-pdo">#</a> 二： PDO</h2><blockquote><p>PDO (PHP Data Object) 扩展为 PHP 访问各种数据库提供了一个轻量级，一致性的接口。无论访问什么数据库，都可以通过一致性的接口去操作</p></blockquote><h3 id="21-基本配置"><a class="anchor" href="#21-基本配置">#</a> 2.1 基本配置</h3><figure class="highlight ini"><figcaption data-lang="ini"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token key attr-name">extension</span><span class="token punctuation">=</span><span class="token value attr-value">php_pdo_mysql.dll</span></pre></td></tr></tbody></table></figure><h3 id="22-pdo核心类"><a class="anchor" href="#22-pdo核心类">#</a> 2.2  pdo 核心类</h3><ol><li>PDO 类，表示 PHP 和数据库之间的一个连接</li><li>PDOStatement 类<ol><li>第一： 表示执行数据查询语句 (select ,show) 后相关结果集</li><li>第二： 预处理对象</li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> programe </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue+electron的搭建</title>
+      <link href="/2022/02/16/programe/vue+electron%20%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+      <url>/2022/02/16/programe/vue+electron%20%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="环境搭建"><a class="anchor" href="#环境搭建">#</a> 环境搭建</h1><h2 id="1-安装-nodejs"><a class="anchor" href="#1-安装-nodejs">#</a> 1. 安装 Nodejs</h2><p>Node.js 安装包及源码下载地址为：<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuL2Rvd25sb2FkLyVFMyU4MCU4Mg==">https://nodejs.org/en/download/。</span></p><p><img data-src="https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/vue-1.jpg" alt="img"> 下载完成后，双击打开，在软件安装位置修改为自己想安装的位置，最好不要安装在 C 盘。</p><p>然后一路默认。</p><figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token function">node</span> --version</pre></td></tr></tbody></table></figure><p>如果显示 版本号，那就成功了。</p><p>如果输出该命令找不到 那就得配置环境变量。 这儿不表，可以百度</p><h2 id="安装vue开发环境"><a class="anchor" href="#安装vue开发环境">#</a> 安装 Vue 开发环境</h2><p>npm 的默认源是国外，非常慢。所以要换源</p><figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org/</pre></td></tr></tbody></table></figure><p>然后输入  <code>npm config get registry</code>  输出跟你修改的一样即成功</p><p>安装 脚手架工具：</p><figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> -g</pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> programe </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> electron </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Php-1</title>
       <link href="/2022/02/15/programe/Php-1/"/>
       <url>/2022/02/15/programe/Php-1/</url>
@@ -148,6 +200,58 @@
         <tags>
             
             <tag> 搜索 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>渗透1</title>
+      <link href="/2022/01/25/IS/%E6%B8%97%E9%80%8F1/"/>
+      <url>/2022/01/25/IS/%E6%B8%97%E9%80%8F1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="黑客三字经"><a class="anchor" href="#黑客三字经">#</a> 黑客三字经</h1><h2 id="老黑客三字经"><a class="anchor" href="#老黑客三字经">#</a> 老黑客三字经</h2><p>进谷歌 找注入</p><p>没注入 就旁注</p><p>没旁注 就 0day</p><p>没 0day 猜目录</p><p>没目录 就嗅探</p><p>爆账户 找后台</p><p>传小马 放大马</p><p>那权限 挂页面</p><p>放暗链 清数据</p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvZjBjYTk4MTUtNTc4Mi00Nzg1LTk5MDAtNGE1MGFmOTQzNTExPyMlRUYlQkMlODglRTUlQUYlODYlRTclQTAlODElRUYlQkMlOUFjcjJ1JUVGJUJDJTg5">https://www.yuque.com/docs/share/f0ca9815-5782-4785-9900-4a50af943511?#（密码：cr2u）</span> 《黑客三字经》</p><h1 id="渗透流程"><a class="anchor" href="#渗透流程">#</a> 渗透流程</h1><h2 id="流程"><a class="anchor" href="#流程">#</a> 流程</h2><p>国内标准</p><p><img data-src="https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F" alt="image.png"></p><p>国外标准：</p><p><img data-src="https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F2" alt="img"></p><h2 id="1-确定目标"><a class="anchor" href="#1-确定目标">#</a> 1： 确定目标</h2><table><thead><tr><th>渗透目标</th><th>常见应用</th></tr></thead><tbody><tr><td>操作系统</td><td>Linux 主机 /windows 主机</td></tr><tr><td>数据库系统</td><td>SQL Server/MySql/Oracle/DB2/PostgreSQL</td></tr><tr><td>应用系统</td><td>FTP/DNS/DHCP/WEB/RDP</td></tr><tr><td>网络设备</td><td>防火墙 / 入侵检测系统 / 交换机 / 路由器</td></tr></tbody></table><p><mark>风险规避</mark></p><ol><li>明确渗透测试范围</li><li>测试之前对重要数据进行备份</li><li>不要进行 DDos/CC 攻击，不破坏数据</li><li>可以对原始系统生成镜像环境，然后对镜像环境进行测试</li><li>任何测试执行之前必须和客户进行沟通，以免引来不必要的麻烦</li></ol><h2 id="2信息收集"><a class="anchor" href="#2信息收集">#</a> 2：信息收集</h2><ol><li></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 信息安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>记一次密码破解</title>
+      <link href="/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/"/>
+      <url>/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="记一次密码破解"><a class="anchor" href="#记一次密码破解">#</a> 记一次密码破解</h1><h2 id="nmap-简单用法"><a class="anchor" href="#nmap-简单用法">#</a> nmap 简单用法</h2><p>nmap -v 详细信息输出<br> nmap -p 指定端口<br> nmap -iL 扫描文件中的 ip<br>nmap -exclude 不扫描某些 ip<br>nmap -Pn 使用 ping 扫描，显式地关闭端口扫描，用于主机发现<br> nmap -sn 使用 ping 扫描，进行端口扫描，假设主机都是 up 的<br> nmap -sS 使用 SYN 扫描，不需要完成三次握手<br> nmap -sT TCP connect 扫描，需要完成三次握手，只适用于找出 TCP 和 UDP 端口<br> nmap -sU 扫描 UDP 端口<br> nmap -sF FIN 扫描，用于探测防火墙状态，识别端口是否关闭，容易漏扫<br> nmap -sV 扫描目标主机的端口和软件版本<br> nmap -O 远程检测操作系统和软件<br> nmap -O --osscan-guess 猜测目标操作系统版本<br> nmap -traceroute 路由跟踪<br> nmap -A 综合扫描，包含 1-10000 的端口 ping 扫描，操作系统扫描，脚本扫描，路由跟踪，服务探测<br> nmap -oN result.txt 将标准输出写入到指定文件中<br> nmap -oX result.xml 将输入写成 xml 的形式<br> nmap -oS result.txt 将输出写成特殊符号的形式，内容跟 - oN 是一样的，只是字体变了而已<br> nmap -oG result.txt 将输出写成特殊格式<br> nmap -oA 将输出所有格式，有三种 .xml/.gnmap/ .nmap<br>nmap -T [0-5] 时间参数模板<br> - T0 用于躲避 IDS，时间很长<br> - T1 用于躲避 IDS，时间很长<br> - T2 降低了扫描速度，使用更小的带宽和目标主机资源对目标靶机进行扫描<br> - T3 默认模式，未做优化<br> - T4 假设用户具有合适及可靠的网络而加速对目标靶机的扫描<br> - T5 假设用户具有更好的网络或者愿意牺牲准确性而加速扫描<br> nmap -sC 根据端口识别服务自动调用默认脚本<br> nmap --script</p><p>作者：Pino_HD<br> 链接：<span class="exturl" data-url="aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC80YzY5NmIxYTk1YjE=">https://www.jianshu.com/p/4c696b1a95b1</span><br> 来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p><h2 id="开始进行破解"><a class="anchor" href="#开始进行破解">#</a> 开始进行破解</h2><figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tbody><tr><td data-num="1"></td><td><pre>nmap -O  <span class="token number">192.168</span>.1.0/24 -oN nmap_scan_1.txt //扫描当前局域网下的所有主机</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">grep</span> MAC nmap_scan_1.txt //过滤信息，获得IP以及对应的 系统</pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 信息安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 破解密码 </tag>
+            
+            <tag> nmap </tag>
             
         </tags>
       
@@ -350,6 +454,31 @@
             <tag> 网络 </tag>
             
             <tag> IP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>代码伪装</title>
+      <link href="/2022/01/15/%E6%8A%80%E5%B7%A7/%E4%BB%A3%E7%A0%81%E4%BC%AA%E8%A3%85/"/>
+      <url>/2022/01/15/%E6%8A%80%E5%B7%A7/%E4%BB%A3%E7%A0%81%E4%BC%AA%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="875fc46b3f2974b0396ded180180a3a8d044ae05a4d1afffbf29706d4aa1188d">2bf780c3b0cb82cc98ebc9ec721f63a65b4677c8256f02376fb1231f21330dc26fd35315fa072d530378784a8483b78630bb00d358b321e5100919708cbfb902889324cbdf44399bf38246b56a61c30774d171074ee429c240cc2242463bc3de0e66faf51f22dad25163eedfacbc8af6</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渗透 </tag>
             
         </tags>
       

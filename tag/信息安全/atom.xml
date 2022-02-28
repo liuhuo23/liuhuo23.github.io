@@ -19,6 +19,11 @@
     <category term="trait" />
     <category term="linux" />
     <category term="PHP" />
+    <category term="渗透" />
+    <category term="破解密码" />
+    <category term="nmap" />
+    <category term="vue" />
+    <category term="electron" />
     <entry>
         <id>https://liuhuo23.github.io/2022/01/13/IS/%E5%AE%89%E5%85%A8%E7%90%86%E8%AE%BA/</id>
         <title>安全理论</title>

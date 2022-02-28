@@ -19,12 +19,127 @@
     <category term="trait" />
     <category term="linux" />
     <category term="PHP" />
+    <category term="渗透" />
+    <category term="破解密码" />
+    <category term="nmap" />
+    <category term="vue" />
+    <category term="electron" />
     <entry>
         <id>https://liuhuo23.github.io/2022/01/25/IS/%E8%B5%84%E4%BA%A7%E6%94%B6%E9%9B%86/</id>
         <title>资产收集</title>
         <link rel="alternate" href="https://liuhuo23.github.io/2022/01/25/IS/%E8%B5%84%E4%BA%A7%E6%94%B6%E9%9B%86/"/>
         <content type="html"></content>
         <category term="搜索" />
+        <updated>2022-01-25T11:17:46.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://liuhuo23.github.io/2022/01/25/IS/%E6%B8%97%E9%80%8F1/</id>
+        <title>渗透1</title>
+        <link rel="alternate" href="https://liuhuo23.github.io/2022/01/25/IS/%E6%B8%97%E9%80%8F1/"/>
+        <content type="html">&lt;h1 id=&#34;黑客三字经&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#黑客三字经&#34;&gt;#&lt;/a&gt; 黑客三字经&lt;/h1&gt;
+&lt;h2 id=&#34;老黑客三字经&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#老黑客三字经&#34;&gt;#&lt;/a&gt; 老黑客三字经&lt;/h2&gt;
+&lt;p&gt;进谷歌 找注入&lt;/p&gt;
+&lt;p&gt;没注入 就旁注&lt;/p&gt;
+&lt;p&gt;没旁注 就 0day&lt;/p&gt;
+&lt;p&gt;没 0day 猜目录&lt;/p&gt;
+&lt;p&gt;没目录 就嗅探&lt;/p&gt;
+&lt;p&gt;爆账户 找后台&lt;/p&gt;
+&lt;p&gt;传小马 放大马&lt;/p&gt;
+&lt;p&gt;那权限 挂页面&lt;/p&gt;
+&lt;p&gt;放暗链 清数据&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvZjBjYTk4MTUtNTc4Mi00Nzg1LTk5MDAtNGE1MGFmOTQzNTExPyMlRUYlQkMlODglRTUlQUYlODYlRTclQTAlODElRUYlQkMlOUFjcjJ1JUVGJUJDJTg5&#34;&gt;https://www.yuque.com/docs/share/f0ca9815-5782-4785-9900-4a50af943511?#（密码：cr2u）&lt;/span&gt; 《黑客三字经》&lt;/p&gt;
+&lt;h1 id=&#34;渗透流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#渗透流程&#34;&gt;#&lt;/a&gt; 渗透流程&lt;/h1&gt;
+&lt;h2 id=&#34;流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流程&#34;&gt;#&lt;/a&gt; 流程&lt;/h2&gt;
+&lt;p&gt;国内标准&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;国外标准：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F2&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-确定目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-确定目标&#34;&gt;#&lt;/a&gt; 1： 确定目标&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;渗透目标&lt;/th&gt;
+&lt;th&gt;常见应用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;操作系统&lt;/td&gt;
+&lt;td&gt;Linux 主机 /windows 主机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;数据库系统&lt;/td&gt;
+&lt;td&gt;SQL Server/MySql/Oracle/DB2/PostgreSQL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;应用系统&lt;/td&gt;
+&lt;td&gt;FTP/DNS/DHCP/WEB/RDP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;网络设备&lt;/td&gt;
+&lt;td&gt;防火墙 / 入侵检测系统 / 交换机 / 路由器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;mark&gt;风险规避&lt;/mark&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;明确渗透测试范围&lt;/li&gt;
+&lt;li&gt;测试之前对重要数据进行备份&lt;/li&gt;
+&lt;li&gt;不要进行 DDos/CC 攻击，不破坏数据&lt;/li&gt;
+&lt;li&gt;可以对原始系统生成镜像环境，然后对镜像环境进行测试&lt;/li&gt;
+&lt;li&gt;任何测试执行之前必须和客户进行沟通，以免引来不必要的麻烦&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2信息收集&#34;&gt;#&lt;/a&gt; 2：信息收集&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="渗透" />
+        <updated>2022-01-25T11:17:46.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/</id>
+        <title>记一次密码破解</title>
+        <link rel="alternate" href="https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/"/>
+        <content type="html">&lt;h1 id=&#34;记一次密码破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#记一次密码破解&#34;&gt;#&lt;/a&gt; 记一次密码破解&lt;/h1&gt;
+&lt;h2 id=&#34;nmap-简单用法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nmap-简单用法&#34;&gt;#&lt;/a&gt; nmap 简单用法&lt;/h2&gt;
+&lt;p&gt;nmap -v 详细信息输出&lt;br&gt;
+ nmap -p 指定端口&lt;br&gt;
+ nmap -iL 扫描文件中的 ip&lt;br&gt;
+nmap -exclude 不扫描某些 ip&lt;br&gt;
+nmap -Pn 使用 ping 扫描，显式地关闭端口扫描，用于主机发现&lt;br&gt;
+ nmap -sn 使用 ping 扫描，进行端口扫描，假设主机都是 up 的&lt;br&gt;
+ nmap -sS 使用 SYN 扫描，不需要完成三次握手&lt;br&gt;
+ nmap -sT TCP connect 扫描，需要完成三次握手，只适用于找出 TCP 和 UDP 端口&lt;br&gt;
+ nmap -sU 扫描 UDP 端口&lt;br&gt;
+ nmap -sF FIN 扫描，用于探测防火墙状态，识别端口是否关闭，容易漏扫&lt;br&gt;
+ nmap -sV 扫描目标主机的端口和软件版本&lt;br&gt;
+ nmap -O 远程检测操作系统和软件&lt;br&gt;
+ nmap -O --osscan-guess 猜测目标操作系统版本&lt;br&gt;
+ nmap -traceroute 路由跟踪&lt;br&gt;
+ nmap -A 综合扫描，包含 1-10000 的端口 ping 扫描，操作系统扫描，脚本扫描，路由跟踪，服务探测&lt;br&gt;
+ nmap -oN result.txt 将标准输出写入到指定文件中&lt;br&gt;
+ nmap -oX result.xml 将输入写成 xml 的形式&lt;br&gt;
+ nmap -oS result.txt 将输出写成特殊符号的形式，内容跟 - oN 是一样的，只是字体变了而已&lt;br&gt;
+ nmap -oG result.txt 将输出写成特殊格式&lt;br&gt;
+ nmap -oA 将输出所有格式，有三种 .xml/.gnmap/ .nmap&lt;br&gt;
+nmap -T [0-5] 时间参数模板&lt;br&gt;
+ - T0 用于躲避 IDS，时间很长&lt;br&gt;
+ - T1 用于躲避 IDS，时间很长&lt;br&gt;
+ - T2 降低了扫描速度，使用更小的带宽和目标主机资源对目标靶机进行扫描&lt;br&gt;
+ - T3 默认模式，未做优化&lt;br&gt;
+ - T4 假设用户具有合适及可靠的网络而加速对目标靶机的扫描&lt;br&gt;
+ - T5 假设用户具有更好的网络或者愿意牺牲准确性而加速扫描&lt;br&gt;
+ nmap -sC 根据端口识别服务自动调用默认脚本&lt;br&gt;
+ nmap --script&lt;/p&gt;
+&lt;p&gt;作者：Pino_HD&lt;br&gt;
+ 链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC80YzY5NmIxYTk1YjE=&#34;&gt;https://www.jianshu.com/p/4c696b1a95b1&lt;/span&gt;&lt;br&gt;
+ 来源：简书&lt;br&gt;
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
+&lt;h2 id=&#34;开始进行破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始进行破解&#34;&gt;#&lt;/a&gt; 开始进行破解&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -O  &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.0/24 -oN nmap_scan_1.txt //扫描当前局域网下的所有主机&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; MAC nmap_scan_1.txt //过滤信息，获得IP以及对应的 系统&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="破解密码" />
+        <category term="nmap" />
         <updated>2022-01-25T11:17:46.000Z</updated>
     </entry>
     <entry>

@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Hexo • Posts by &#34;渗透&#34; tag</title>
+        <link>https://liuhuo23.github.io</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 25 Jan 2022 19:17:46 +0800</pubDate>
+        <lastBuildDate>Tue, 25 Jan 2022 19:17:46 +0800</lastBuildDate>
+        <category>MySQL</category>
+        <category>web</category>
+        <category>web容器</category>
+        <category>信息安全</category>
+        <category>操作系统</category>
+        <category>网络</category>
+        <category>IP</category>
+        <category>socket</category>
+        <category>rust</category>
+        <category>服务器</category>
+        <category>搜索</category>
+        <category>密码</category>
+        <category>trait</category>
+        <category>linux</category>
+        <category>PHP</category>
+        <category>渗透</category>
+        <category>破解密码</category>
+        <category>nmap</category>
+        <category>vue</category>
+        <category>electron</category>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/25/IS/%E6%B8%97%E9%80%8F1/</guid>
+            <title>渗透1</title>
+            <link>https://liuhuo23.github.io/2022/01/25/IS/%E6%B8%97%E9%80%8F1/</link>
+            <category>渗透</category>
+            <pubDate>Tue, 25 Jan 2022 19:17:46 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;黑客三字经&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#黑客三字经&#34;&gt;#&lt;/a&gt; 黑客三字经&lt;/h1&gt;
+&lt;h2 id=&#34;老黑客三字经&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#老黑客三字经&#34;&gt;#&lt;/a&gt; 老黑客三字经&lt;/h2&gt;
+&lt;p&gt;进谷歌 找注入&lt;/p&gt;
+&lt;p&gt;没注入 就旁注&lt;/p&gt;
+&lt;p&gt;没旁注 就 0day&lt;/p&gt;
+&lt;p&gt;没 0day 猜目录&lt;/p&gt;
+&lt;p&gt;没目录 就嗅探&lt;/p&gt;
+&lt;p&gt;爆账户 找后台&lt;/p&gt;
+&lt;p&gt;传小马 放大马&lt;/p&gt;
+&lt;p&gt;那权限 挂页面&lt;/p&gt;
+&lt;p&gt;放暗链 清数据&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2RvY3Mvc2hhcmUvZjBjYTk4MTUtNTc4Mi00Nzg1LTk5MDAtNGE1MGFmOTQzNTExPyMlRUYlQkMlODglRTUlQUYlODYlRTclQTAlODElRUYlQkMlOUFjcjJ1JUVGJUJDJTg5&#34;&gt;https://www.yuque.com/docs/share/f0ca9815-5782-4785-9900-4a50af943511?#（密码：cr2u）&lt;/span&gt; 《黑客三字经》&lt;/p&gt;
+&lt;h1 id=&#34;渗透流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#渗透流程&#34;&gt;#&lt;/a&gt; 渗透流程&lt;/h1&gt;
+&lt;h2 id=&#34;流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流程&#34;&gt;#&lt;/a&gt; 流程&lt;/h2&gt;
+&lt;p&gt;国内标准&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;国外标准：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/%E6%B8%97%E9%80%8F2&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-确定目标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-确定目标&#34;&gt;#&lt;/a&gt; 1： 确定目标&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;渗透目标&lt;/th&gt;
+&lt;th&gt;常见应用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;操作系统&lt;/td&gt;
+&lt;td&gt;Linux 主机 /windows 主机&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;数据库系统&lt;/td&gt;
+&lt;td&gt;SQL Server/MySql/Oracle/DB2/PostgreSQL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;应用系统&lt;/td&gt;
+&lt;td&gt;FTP/DNS/DHCP/WEB/RDP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;网络设备&lt;/td&gt;
+&lt;td&gt;防火墙 / 入侵检测系统 / 交换机 / 路由器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;mark&gt;风险规避&lt;/mark&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;明确渗透测试范围&lt;/li&gt;
+&lt;li&gt;测试之前对重要数据进行备份&lt;/li&gt;
+&lt;li&gt;不要进行 DDos/CC 攻击，不破坏数据&lt;/li&gt;
+&lt;li&gt;可以对原始系统生成镜像环境，然后对镜像环境进行测试&lt;/li&gt;
+&lt;li&gt;任何测试执行之前必须和客户进行沟通，以免引来不必要的麻烦&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2信息收集&#34;&gt;#&lt;/a&gt; 2：信息收集&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/15/%E6%8A%80%E5%B7%A7/%E4%BB%A3%E7%A0%81%E4%BC%AA%E8%A3%85/</guid>
+            <title>代码伪装</title>
+            <link>https://liuhuo23.github.io/2022/01/15/%E6%8A%80%E5%B7%A7/%E4%BB%A3%E7%A0%81%E4%BC%AA%E8%A3%85/</link>
+            <category>渗透</category>
+            <pubDate>Sat, 15 Jan 2022 09:50:48 +0800</pubDate>
+            <description><![CDATA[ &lt;div class=&#34;hbe hbe-container&#34; id=&#34;hexo-blog-encrypt&#34; data-wpm=&#34;Oh, this is an invalid password. Check and try again, please.&#34; data-whm=&#34;OOPS, these decrypted content may changed, but you can still have a look.&#34;&gt;
+  &lt;script id=&#34;hbeData&#34; type=&#34;hbeData&#34; data-hmacdigest=&#34;875fc46b3f2974b0396ded180180a3a8d044ae05a4d1afffbf29706d4aa1188d&#34;&gt;2bf780c3b0cb82cc98ebc9ec721f63a65b4677c8256f02376fb1231f21330dc26fd35315fa072d530378784a8483b78630bb00d358b321e5100919708cbfb902889324cbdf44399bf38246b56a61c30774d171074ee429c240cc2242463bc3de0e66faf51f22dad25163eedfacbc8af6&lt;/script&gt;
+  &lt;div class=&#34;hbe hbe-content&#34;&gt;
+    &lt;div class=&#34;hbe hbe-input hbe-input-default&#34;&gt;
+      &lt;input class=&#34;hbe hbe-input-field hbe-input-field-default&#34; type=&#34;password&#34; id=&#34;hbePass&#34;&gt;
+      &lt;label class=&#34;hbe hbe-input-label hbe-input-label-default&#34; for=&#34;hbePass&#34;&gt;
+        &lt;span class=&#34;hbe hbe-input-label-content hbe-input-label-content-default&#34;&gt;Hey, password is required here.&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script data-pjax src=&#34;/lib/hbe.js&#34;&gt;&lt;/script&gt;&lt;link href=&#34;/css/hbe.style.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34;&gt; ]]></description>
+        </item>
+    </channel>
+</rss>
