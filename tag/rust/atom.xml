@@ -4,26 +4,30 @@
     <title>Hexo • Posts by &#34;rust&#34; tag</title>
     <link href="https://liuhuo23.github.io" />
     <updated>2022-01-26T03:17:46.000Z</updated>
-    <category term="MySQL" />
+    <category term="socket" />
+    <category term="渗透" />
+    <category term="服务器" />
     <category term="web" />
     <category term="web容器" />
+    <category term="xss" />
+    <category term="信息收集" />
     <category term="信息安全" />
+    <category term="mysql" />
+    <category term="搜索" />
     <category term="操作系统" />
     <category term="网络" />
-    <category term="IP" />
-    <category term="socket" />
-    <category term="rust" />
-    <category term="服务器" />
-    <category term="搜索" />
-    <category term="密码" />
-    <category term="trait" />
-    <category term="linux" />
-    <category term="PHP" />
-    <category term="渗透" />
     <category term="破解密码" />
     <category term="nmap" />
-    <category term="vue" />
+    <category term="MySQL" />
+    <category term="IP" />
+    <category term="密码" />
+    <category term="linux" />
+    <category term="vue3" />
     <category term="electron" />
+    <category term="PHP" />
+    <category term="vue" />
+    <category term="rust" />
+    <category term="trait" />
     <entry>
         <id>https://liuhuo23.github.io/2022/01/26/rust/rust-%E5%B8%B8%E7%94%A8trait/</id>
         <title>rust-常用trait</title>

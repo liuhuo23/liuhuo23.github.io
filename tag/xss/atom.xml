@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://liuhuo23.github.io</id>
+    <title>Hexo • Posts by &#34;xss&#34; tag</title>
+    <link href="https://liuhuo23.github.io" />
+    <updated>2022-01-17T03:31:22.000Z</updated>
+    <category term="socket" />
+    <category term="渗透" />
+    <category term="服务器" />
+    <category term="web" />
+    <category term="web容器" />
+    <category term="xss" />
+    <category term="信息收集" />
+    <category term="信息安全" />
+    <category term="mysql" />
+    <category term="搜索" />
+    <category term="操作系统" />
+    <category term="网络" />
+    <category term="破解密码" />
+    <category term="nmap" />
+    <category term="MySQL" />
+    <category term="IP" />
+    <category term="密码" />
+    <category term="linux" />
+    <category term="vue3" />
+    <category term="electron" />
+    <category term="PHP" />
+    <category term="vue" />
+    <category term="rust" />
+    <category term="trait" />
+    <entry>
+        <id>https://liuhuo23.github.io/2022/01/17/IS/xss/</id>
+        <title>xss</title>
+        <link rel="alternate" href="https://liuhuo23.github.io/2022/01/17/IS/xss/"/>
+        <content type="html">&lt;h1 id=&#34;xss-攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xss-攻击&#34;&gt;#&lt;/a&gt; XSS 攻击&lt;/h1&gt;
+&lt;h2 id=&#34;了解xss漏洞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#了解xss漏洞&#34;&gt;#&lt;/a&gt; 了解 XSS 漏洞&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;XSS（Cross Site Scripting) 跨站脚本，合适的方式应该叫做跨站脚本攻击，诞生于 1996 年，人们经常将夸张脚本攻击缩写为 CSS，但这会与原来开的网页样式冲突，因此叫 XSS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类&#34;&gt;#&lt;/a&gt; 分类&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;反射型（非持久型）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;攻击者事先制作好攻击链接，需要欺骗用户自己去点击链接才能触发漏洞&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;存储型（持久型）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;payload 被存储到数据库内，每次只要访问就可以被触发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DOM 型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DOM 型 XSS 漏洞基于文档对象模型的一种漏洞&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;xss形成的原因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#xss形成的原因&#34;&gt;#&lt;/a&gt; XSS 形成的原因&lt;/h2&gt;
+&lt;p&gt;程序员在编写代码时，未对用户输入的数据进行处理，或者处理不当，从而导致恶意 payload 代码被执行。简单来说是对非预期输入的过分信任&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="xss" />
+        <updated>2022-01-17T03:31:22.000Z</updated>
+    </entry>
+</feed>

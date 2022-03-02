@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Hexo • Posts by &#34;vue3&#34; tag</title>
+        <link>https://liuhuo23.github.io</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 25 Feb 2022 22:40:33 +0800</pubDate>
+        <lastBuildDate>Fri, 25 Feb 2022 22:40:33 +0800</lastBuildDate>
+        <category>socket</category>
+        <category>渗透</category>
+        <category>服务器</category>
+        <category>web</category>
+        <category>web容器</category>
+        <category>xss</category>
+        <category>信息收集</category>
+        <category>信息安全</category>
+        <category>mysql</category>
+        <category>搜索</category>
+        <category>操作系统</category>
+        <category>网络</category>
+        <category>破解密码</category>
+        <category>nmap</category>
+        <category>MySQL</category>
+        <category>IP</category>
+        <category>密码</category>
+        <category>linux</category>
+        <category>vue3</category>
+        <category>electron</category>
+        <category>PHP</category>
+        <category>vue</category>
+        <category>rust</category>
+        <category>trait</category>
+        <item>
+            <guid isPermalink="true">https://liuhuo23.github.io/2022/02/25/programe/Vue3/</guid>
+            <title>vue3</title>
+            <link>https://liuhuo23.github.io/2022/02/25/programe/Vue3/</link>
+            <category>vue3</category>
+            <category>electron</category>
+            <pubDate>Fri, 25 Feb 2022 22:40:33 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;vue3-的变化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vue3-的变化&#34;&gt;#&lt;/a&gt; vue3 的变化&lt;/h1&gt;
+&lt;h2 id=&#34;1-vue30-生命周期函数变更&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-vue30-生命周期函数变更&#34;&gt;#&lt;/a&gt; 1、Vue3.0 生命周期函数变更&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Vue2.x&lt;/th&gt;
+&lt;th&gt;Vue3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;beforeCreate&lt;/td&gt;
+&lt;td&gt;setup&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;create&lt;/td&gt;
+&lt;td&gt;setup&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;beforeMount (挂载钱)&lt;/td&gt;
+&lt;td&gt;onBeforeMount&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mounted (挂载后)&lt;/td&gt;
+&lt;td&gt;onMounted&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;beforeUpdate (数据更新前)&lt;/td&gt;
+&lt;td&gt;onBeforeUpdate&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;updated (数据更新后)&lt;/td&gt;
+&lt;td&gt;onUpdate&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;beforeDestroy (销毁前&lt;/td&gt;
+&lt;td&gt;OnBeforeUnmount&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;destroyed (销毁后)&lt;/td&gt;
+&lt;td&gt;OnUnMounted&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;2-单文件组件-script-setup&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-单文件组件-script-setup&#34;&gt;#&lt;/a&gt; 2. 单文件组件  &lt;code&gt;&amp;lt;script setup&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&amp;lt;script setup&amp;gt; 是在单文件组件 (SFC) 中使用组合式 API 的编译时语法糖。相比于普通的 &amp;lt;script&amp;gt; 语法，它具有更多优势：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;更少的样板内容，更简洁的代码。&lt;/li&gt;
+&lt;li&gt;能够使用纯 Typescript 声明 props 和抛出事件。&lt;/li&gt;
+&lt;li&gt;更好的运行时性能 (其模板会被编译成与其同一作用域的渲染函数，没有任何的中间代理)。&lt;/li&gt;
+&lt;li&gt;更好的 IDE 类型推断性能 (减少语言服务器从代码中抽离类型的工作)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly92My5jbi52dWVqcy5vcmcvYXBpL3NmYy1zY3JpcHQtc2V0dXAuaHRtbCMlRTUlOUYlQkElRTYlOUMlQUMlRTglQUYlQUQlRTYlQjMlOTU=&#34;&gt;#&lt;/span&gt; 基本语法&lt;/h2&gt;
+&lt;p&gt;要使用这个语法，需要将  &lt;code&gt;setup&lt;/code&gt;  attribute 添加到  &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;  代码块上：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-vue&#34;&gt;&amp;lt;script setup&amp;gt;
+console.log(&#39;hello script setup&#39;)
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;里面的代码会被编译成组件  &lt;code&gt;setup()&lt;/code&gt;  函数的内容。这意味着与普通的  &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;  只在组件被首次引入的时候执行一次不同， &lt;code&gt;&amp;lt;script setup&amp;gt;&lt;/code&gt;  中的代码会在&lt;strong&gt;每次组件实例被创建的时候执行&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;setuphttpsv3cnvuejsorgapisfc-script-setuphtml顶层的绑定会被暴露给模-顶层的绑定会被暴露给模板&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#setuphttpsv3cnvuejsorgapisfc-script-setuphtml顶层的绑定会被暴露给模-顶层的绑定会被暴露给模板&#34;&gt;#&lt;/a&gt; [setup](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly92My5jbi52dWVqcy5vcmcvYXBpL3NmYy1zY3JpcHQtc2V0dXAuaHRtbCMlRTklQTElQjYlRTUlQjElODIlRTclOUElODQlRTclQkIlOTElRTUlQUUlOUElRTQlQkMlOUElRTglQTIlQUIlRTYlOUElQjQlRTklOUMlQjIlRTclQkIlOTklRTYlQTglQTE=&#34;&gt;https://v3.cn.vuejs.org/api/sfc-script-setup.html# 顶层的绑定会被暴露给模&lt;/span&gt; 顶层的绑定会被暴露给模板&lt;/h3&gt;
+&lt;p&gt;当使用  &lt;code&gt;&amp;lt;script setup&amp;gt;&lt;/code&gt;  的时候，任何在  &lt;code&gt;&amp;lt;script setup&amp;gt;&lt;/code&gt;  声明的顶层的绑定 (包括变量，函数声明，以及 import 引入的内容) 都能在模板中直接使用：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-vue&#34;&gt;&amp;lt;script setup&amp;gt;
+// 变量
+const msg = &#39;Hello!&#39;
+
+// 函数
+function log() {
+  console.log(msg)
+}
+&amp;lt;/script&amp;gt;
+
+&amp;lt;template&amp;gt;
+  &amp;lt;div @click=&#34;log&#34;&amp;gt;{{ msg }}&amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;import 导入的内容也会以同样的方式暴露。意味着可以在模板表达式中直接使用导入的 helper 函数，并不需要通过  &lt;code&gt;methods&lt;/code&gt;  选项来暴露它：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-vue&#34;&gt;&amp;lt;script setup&amp;gt;
+import { capitalize } from &#39;./helpers&#39;
+&amp;lt;/script&amp;gt;
+
+&amp;lt;template&amp;gt;
+  &amp;lt;div&amp;gt;{{ capitalize(&#39;hello&#39;) }}&amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

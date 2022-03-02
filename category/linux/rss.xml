@@ -7,26 +7,30 @@
         <language>zh-CN</language>
         <pubDate>Fri, 11 Feb 2022 10:43:46 +0800</pubDate>
         <lastBuildDate>Fri, 11 Feb 2022 10:43:46 +0800</lastBuildDate>
-        <category>MySQL</category>
+        <category>socket</category>
+        <category>渗透</category>
+        <category>服务器</category>
         <category>web</category>
         <category>web容器</category>
+        <category>xss</category>
+        <category>信息收集</category>
         <category>信息安全</category>
+        <category>mysql</category>
+        <category>搜索</category>
         <category>操作系统</category>
         <category>网络</category>
-        <category>IP</category>
-        <category>socket</category>
-        <category>rust</category>
-        <category>服务器</category>
-        <category>搜索</category>
-        <category>密码</category>
-        <category>trait</category>
-        <category>linux</category>
-        <category>PHP</category>
-        <category>渗透</category>
         <category>破解密码</category>
         <category>nmap</category>
-        <category>vue</category>
+        <category>MySQL</category>
+        <category>IP</category>
+        <category>密码</category>
+        <category>linux</category>
+        <category>vue3</category>
         <category>electron</category>
+        <category>PHP</category>
+        <category>vue</category>
+        <category>rust</category>
+        <category>trait</category>
         <item>
             <guid isPermalink="true">https://liuhuo23.github.io/2022/02/11/linux/shell%E8%84%9A%E6%9C%AC/</guid>
             <title>shell脚本</title>
