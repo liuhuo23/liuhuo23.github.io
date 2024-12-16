@@ -9,8 +9,8 @@
 #！ @docs https://aurora.tridiamond.tech/guide/configuration.html
 #! ---------------------------------------------------------------
 site:
-  subtitle: Aurora's Blog
-  author: Aurora
+  subtitle: liuhuo's Blog
+  author: liuhuo
   nick: Auroral UI
   description:
   link: '/'
@@ -19,14 +19,14 @@ site:
   logo:
   avatar:
   beian:
-    number: ''
-    link: ''
+    number: '京ICP备2022029113号-1'
+    link: 'http.fengliuhuo.top'
   police_beian:
     number: ''
     link: ''
   # Start date of the blog YYY-MM-DD
   # 博客开始运行日期
-  started_date:
+  started_date: 2024-12-17
   # Path unique identifier (文章 URL 唯一标识)
   # uid: use unique ID
   # slug: use generated slug base on title
