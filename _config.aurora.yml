@@ -16,7 +16,7 @@ site:
   link: '/'
   language: zh-CN
   multi_language: true
-  logo:
+  logo: https://avatars.githubusercontent.com/u/45648682?s=400&u=9abf5def111f37821c3d6e638dff306f7d4aa94c&v=4
   avatar:
   beian:
     number: '京ICP备2022029113号-1'
