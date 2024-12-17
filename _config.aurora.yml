@@ -75,6 +75,7 @@ theme:
 #! @docs https://aurora.tridiamond.tech/guide/social.html
 #! ---------------------------------------------------------------
 socials:
+  github: "https://github.com/liuhuo23"
   customs:
   ##! Example:
   ##! --- Using SVG
