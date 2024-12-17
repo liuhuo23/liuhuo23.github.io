@@ -186,8 +186,8 @@ copy_protection:
 #! @docs https://aurora.tridiamond.tech/guide/site-meta.html#custom-meta
 #! ---------------------------------------------------------------
 aurora_bot:
-  enable: false
-  locale: en
+  enable: true
+  locale: cn
   bot_type: dia
   tips:
 
