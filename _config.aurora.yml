@@ -56,12 +56,12 @@ menu:
   Tags: true
   Archives: true
   Friends: false
-  pages-menu:
-   name: 编程语言
-   children:
-    rust:
-        name: 'rust'
-        path: '/page/rust'
+  rust:
+    name: 'rust'
+    path: 'rust'
+  go:
+    name: '/go'
+    path: '/go'
 
 #! ---------------------------------------------------------------
 #! Theme Config
